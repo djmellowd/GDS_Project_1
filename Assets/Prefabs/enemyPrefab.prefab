@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3265631470515268735}
   - component: {fileID: 3265631470515268732}
-  - component: {fileID: 3265631470515268734}
+  - component: {fileID: 5351792166460554980}
   m_Layer: 0
   m_Name: enemyPrefab
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3265631470515268734
+--- !u!114 &5351792166460554980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3265631470515268733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8af77a1e42cd324d9fef7cafc5e0b18, type: 3}
+  m_Script: {fileID: 11500000, guid: 85a5ca700925cc64f93f7df2cc2d1054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 6383543895204848599, guid: c2e142fef4ff8d043af4cd16b796c224,

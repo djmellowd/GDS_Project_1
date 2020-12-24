@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicFlyingAI : MonoBehaviour
+public class BasicFlyingShootingAI : MonoBehaviour
 {
+    [SerializeField] private GameObject rocketPrefab;
+    private GameObject _rocket;
+
     public float speed = 3.0f;
     public float obstacleRange = 5.0f;
 
@@ -14,12 +17,21 @@ public class BasicFlyingAI : MonoBehaviour
         RaycastHit hit;
         if (Physics.SphereCast(ray, 0.75f, out hit))
         {
-            if (hit.distance < obstacleRange)
+            GameObject hitObject = hit.transform.gameObject;
+            if (hitObject.GetComponent<Player>())
+            {
+                if (_rocket == null)
+                {
+                    _rocket = Instantiate(rocketPrefab) as GameObject;
+                    _rocket.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
+                    _rocket.transform.rotation = transform.rotation;
+                }
+            }
+            else if (hit.distance < obstacleRange)
             {
                 float angle = Random.Range(-110, 110);
                 transform.Rotate(0, angle, 0);
             }
         }
-
     }
 }
