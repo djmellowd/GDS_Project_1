@@ -3,8 +3,8 @@ using System.Collections;
 
 public class BasicFlyingShootingAI : MonoBehaviour
 {
-    [SerializeField] private GameObject fireballPrefab;
-    private GameObject _fireball;
+    [SerializeField] private GameObject rocketPrefab;
+    private GameObject _rocket;
 
     public float speed = 3.0f;
     public float obstacleRange = 5.0f;
@@ -20,11 +20,11 @@ public class BasicFlyingShootingAI : MonoBehaviour
             GameObject hitObject = hit.transform.gameObject;
             if (hitObject.GetComponent<Player>())
             {
-                if (_fireball == null)
+                if (_rocket == null)
                 {
-                    _fireball = Instantiate(fireballPrefab) as GameObject;
-                    _fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
-                    _fireball.transform.rotation = transform.rotation;
+                    _rocket = Instantiate(rocketPrefab) as GameObject;
+                    _rocket.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
+                    _rocket.transform.rotation = transform.rotation;
                 }
             }
             else if (hit.distance < obstacleRange)
