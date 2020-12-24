@@ -5171,6 +5171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8af77a1e42cd324d9fef7cafc5e0b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireballPrefab: {fileID: 638800323}
   speed: 3
   obstacleRange: 5
 --- !u!1 &2042885344
