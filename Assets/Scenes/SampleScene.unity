@@ -5343,8 +5343,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d9815d11b537049984ac069c78c4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2000
+  speed: 1500
   jumpForce: 18
+  missilePrefab: {fileID: 7965578094682039791, guid: 0c81aedc3b0bb704094575717152cf4d,
+    type: 3}
 --- !u!61 &2100218685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5588,6 +5590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759917836033754940, guid: 47131481f16d49347897629c11b9aec8,
+        type: 3}
+      propertyPath: speed
+      value: 1500
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

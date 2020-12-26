@@ -3,11 +3,14 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 250.0f;
-    public float jumpForce = 12.0f;
+    public float speed = 1500.0f;
+    public float jumpForce = 18.0f;
 
     private Rigidbody2D _body;
     private BoxCollider2D _box;
+
+    [SerializeField] private GameObject missilePrefab;
+    private GameObject _missile;
 
     void Start()
     {
@@ -36,6 +39,11 @@ public class Player : MonoBehaviour
         if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f, transform.rotation) as GameObject;
         }
     }
 }
