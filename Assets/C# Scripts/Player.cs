@@ -10,7 +10,9 @@ public class Player : MonoBehaviour
     private BoxCollider2D _box;
 
     [SerializeField] private GameObject missilePrefab;
+    [SerializeField] private GameObject missile2Prefab;
     private GameObject _missile;
+    private GameObject _missile2;
 
     void Start()
     {
@@ -44,6 +46,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f, transform.rotation) as GameObject;
+            _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 2.0f, transform.rotation) as GameObject;
         }
     }
 }

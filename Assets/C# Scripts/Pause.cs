@@ -3,34 +3,23 @@ using System.Collections;
 
 public class Pause : MonoBehaviour
 {
-    [SerializeField] GameObject pausePanel;
     void Start()
     {
-        pausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!pausePanel.activeInHierarchy)
+            if (Time.timeScale == 1)
             {
-                PauseGame();
+                Time.timeScale = 0;
+            }
+            else if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
             }
         }
-        if (pausePanel.activeInHierarchy)
-        {
-            ContinueGame();
-        }
-    }
-    private void PauseGame()
-    {
-        Time.timeScale = 0;
-        pausePanel.SetActive(true);
-    }
-    private void ContinueGame()
-    {
-        Time.timeScale = 1;
-        pausePanel.SetActive(false);
     }
 }
