@@ -4714,7 +4714,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 0
@@ -5519,7 +5519,7 @@ PrefabInstance:
     - target: {fileID: 207757570574168969, guid: 4f1e72d64c52288479e0e657d1da218d,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 207757570574169076, guid: 4f1e72d64c52288479e0e657d1da218d,
         type: 3}
@@ -5650,6 +5650,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289146440599064631, guid: 0b2d5a2af433ce94abb68c6f25565fa2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.78323585
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289146440599064631, guid: 0b2d5a2af433ce94abb68c6f25565fa2,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07161793
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289146440599064631, guid: 0b2d5a2af433ce94abb68c6f25565fa2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4231755998902244610, guid: 0b2d5a2af433ce94abb68c6f25565fa2, type: 3}

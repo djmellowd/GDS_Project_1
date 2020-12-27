@@ -49,4 +49,12 @@ public class Player : MonoBehaviour
             _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 2.0f, transform.rotation) as GameObject;
         }
     }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Bomb _bomb = col.GetComponent<Bomb>();
+        if (_bomb != null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
