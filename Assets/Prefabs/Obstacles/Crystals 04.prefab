@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4407789305627406882
+--- !u!1 &5474914038443671629
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6812453871983163767}
-  - component: {fileID: 137381567889137459}
-  - component: {fileID: 7756314272062352254}
+  - component: {fileID: 2952971602020801156}
+  - component: {fileID: 6325629167984601834}
+  - component: {fileID: 4798910438184293747}
   m_Layer: 0
-  m_Name: Tile 03
+  m_Name: Crystals 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6812453871983163767
+--- !u!4 &2952971602020801156
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4407789305627406882}
+  m_GameObject: {fileID: 5474914038443671629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &137381567889137459
+--- !u!212 &6325629167984601834
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4407789305627406882}
+  m_GameObject: {fileID: 5474914038443671629}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -68,27 +68,27 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 237576043
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0c3674aa337dc274ea96253c94c5b9f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0edaff4768f0fff4e8d677df29bef14f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 6.125}
+  m_Size: {x: 3.0625, y: 3.203125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &7756314272062352254
+--- !u!60 &4798910438184293747
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4407789305627406882}
+  m_GameObject: {fileID: 5474914038443671629}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -99,26 +99,26 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 6.125}
-    newSize: {x: 3, y: 6.125}
+    oldSize: {x: 3.0625, y: 3.203125}
+    newSize: {x: 3.0625, y: 3.203125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.4375, y: -1.140625}
-      - {x: 1.5, y: -1.109375}
-      - {x: 1.5, y: 2.8138187}
-      - {x: 1.5, y: 2.9722605}
-      - {x: 1.2275257, y: 2.9707854}
-      - {x: 1.0628815, y: 2.9039707}
-      - {x: 0.8908291, y: 2.8809981}
-      - {x: 0.7194042, y: 2.9111834}
-      - {x: 0.2925949, y: 2.912449}
-      - {x: -0.021211624, y: 2.9749486}
-      - {x: -0.1879406, y: 2.9974692}
-      - {x: -0.74375725, y: 2.876834}
-      - {x: -0.9406433, y: 2.9993458}
-      - {x: -1.5, y: 2.9974692}
-      - {x: -1.5, y: -1.140625}
+    - - {x: 0.3125, y: 0.4140625}
+      - {x: 0.14674571, y: 0.1777274}
+      - {x: -0.010582447, y: 0.3445313}
+      - {x: -0.20163381, y: 0.20422602}
+      - {x: -0.33328816, y: 0.44842765}
+      - {x: -0.515625, y: 0.6328125}
+      - {x: -0.53125, y: 0.6171875}
+      - {x: -0.5047941, y: 0.31551844}
+      - {x: -0.3769719, y: 0.09730826}
+      - {x: -0.390625, y: -0.2734375}
+      - {x: -0.296875, y: -0.3046875}
+      - {x: 0.40625, y: -0.3046875}
+      - {x: 0.546875, y: -0.0234375}
+      - {x: 0.546875, y: 0.2109375}
+      - {x: 0.390625, y: 0.3984375}
