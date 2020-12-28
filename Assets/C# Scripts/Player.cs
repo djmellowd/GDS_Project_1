@@ -38,12 +38,12 @@ public class Player : MonoBehaviour
             grounded = true;
         }
 
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetButtonDown("Jump"))
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetButtonDown("Fire"))
         {
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f, transform.rotation) as GameObject;
             _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 2.0f, transform.rotation) as GameObject;
