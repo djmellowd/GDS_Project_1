@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 18.0f;
 
     private Rigidbody2D _body;
-    private BoxCollider2D _box;
+    private PolygonCollider2D _box;
 
     [SerializeField] private GameObject missilePrefab;
     [SerializeField] private GameObject missile2Prefab;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _body = GetComponent<Rigidbody2D>();
-        _box = GetComponent<BoxCollider2D>();
+        _box = GetComponent<PolygonCollider2D>();
     }
 
     void Update()
