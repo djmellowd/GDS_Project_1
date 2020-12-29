@@ -12,5 +12,11 @@ public class TitleScreen : MonoBehaviour
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene("MainScene");
         }
+
+        //wciśnięcie escape powoduje wyjście z gry
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
