@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 18.0f;
 
     private Rigidbody2D _body;
-    private BoxCollider2D _box;
+    private PolygonCollider2D _box;
 
     [SerializeField] private GameObject missilePrefab;
     [SerializeField] private GameObject missile2Prefab;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _body = GetComponent<Rigidbody2D>();
-        _box = GetComponent<BoxCollider2D>();
+        _box = GetComponent<PolygonCollider2D>();
     }
 
     void Update()
@@ -38,12 +38,12 @@ public class Player : MonoBehaviour
             grounded = true;
         }
 
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetButtonDown("Jump"))
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetButtonDown("Fire"))
         {
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f, transform.rotation) as GameObject;
             _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 2.0f, transform.rotation) as GameObject;
