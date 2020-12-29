@@ -2298,8 +2298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f3531b0d0185459e6c0c99d2d8dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3265631470515268733, guid: 6d402544ec58d5e449761eb4aff6b74f,
-    type: 3}
+  Enemy02Prefab: {fileID: 0}
 --- !u!1001 &1220818930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3618,6 +3617,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3163049651418885894, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7f1e25efa334c43844a666e59268ca, type: 3}
 --- !u!1001 &5289146441687025994
@@ -3746,6 +3750,21 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[57].y
       value: -0.9157486
       objectReference: {fileID: 0}
+    - target: {fileID: 5522879620030648947, guid: e79af15c2ec157b439babb2139971d5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040941257624641635, guid: e79af15c2ec157b439babb2139971d5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752062910379878394, guid: e79af15c2ec157b439babb2139971d5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390116, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3805,6 +3824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147018720379390118, guid: e79af15c2ec157b439babb2139971d5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1789513225, guid: e79af15c2ec157b439babb2139971d5e, type: 3}
