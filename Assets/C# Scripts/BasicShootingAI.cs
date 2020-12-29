@@ -16,7 +16,7 @@ public class BasicShootingAI : MonoBehaviour
                 if (_rocket == null)
                 {
                     _rocket = Instantiate(rocketPrefab) as GameObject;
-                    _rocket.transform.position = transform.TransformPoint(-Vector2.up * 4.0f);
+                    _rocket.transform.position = transform.TransformPoint(-Vector2.up * 1.0f);
                     _rocket.transform.rotation = transform.rotation;
                 }
             }

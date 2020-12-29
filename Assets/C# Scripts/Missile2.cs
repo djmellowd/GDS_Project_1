@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Missile2 : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 5.0f;
 
     void Update()
     {

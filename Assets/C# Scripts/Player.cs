@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire"))
         {
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f, transform.rotation) as GameObject;
-            _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 2.0f, transform.rotation) as GameObject;
+            _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 3.0f, transform.rotation) as GameObject;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
