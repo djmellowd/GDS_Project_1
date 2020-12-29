@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7336823421693141962}
   - component: {fileID: 5344132479044032034}
-  m_Layer: 0
-  m_Name: ufo_01
+  m_Layer: 11
+  m_Name: Enemy01Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

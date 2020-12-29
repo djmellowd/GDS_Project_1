@@ -16,8 +16,8 @@ TagManager:
   - Background
   - PlayerMissile
   - Player
-  - 
-  - 
+  - Enemy
+  - EnemyMissile
   - 
   - 
   - 

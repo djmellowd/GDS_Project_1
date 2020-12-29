@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6307818238587497240}
   - component: {fileID: -3497640567890436003}
   - component: {fileID: 5337092242989123920}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: rocketPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
