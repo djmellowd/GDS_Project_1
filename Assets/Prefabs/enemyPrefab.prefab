@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3265631470515268735}
   - component: {fileID: 3265631470515268732}
   - component: {fileID: 5351792166460554980}
-  - component: {fileID: -3772549511204833978}
   - component: {fileID: 7268361667595828206}
   - component: {fileID: 2511373531845334982}
   m_Layer: 0
@@ -98,21 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  obstacleRange: 5
---- !u!114 &-3772549511204833978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3265631470515268733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0792c8aad8f97cd4fa7382c73ce07a3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rocketPrefab: {fileID: 6383543895204848599, guid: c2e142fef4ff8d043af4cd16b796c224,
-    type: 3}
 --- !u!50 &7268361667595828206
 Rigidbody2D:
   serializedVersion: 4

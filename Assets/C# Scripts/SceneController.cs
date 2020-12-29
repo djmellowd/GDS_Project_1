@@ -3,9 +3,9 @@ using System.Collections;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
-    private GameObject _enemy;
-    private GameObject _enemy2;
+    [SerializeField] public GameObject enemyPrefab;
+    public GameObject _enemy;
+    public GameObject _enemy2;
 
     void Update()
     {
@@ -21,5 +21,9 @@ public class SceneController : MonoBehaviour
             float angle2 = 180;
             _enemy2.transform.Rotate(0, angle2, 0);
         }
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Destroy(col.gameObject);
     }
 }
