@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7576573251458240179}
   - component: {fileID: 1424203387797873010}
-  - component: {fileID: 4275912545819952769}
+  - component: {fileID: 3882983708063641590}
   m_Layer: 0
   m_Name: Tile 01
   m_TagString: Untagged
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4275912545819952769
-PolygonCollider2D:
+--- !u!61 &3882983708063641590
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,7 +95,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.06959009}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -105,22 +105,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.4375, y: -1.140625}
-      - {x: 1.5, y: -1.109375}
-      - {x: 1.5, y: 2.915312}
-      - {x: 1.3469219, y: 2.9123292}
-      - {x: 1.2067184, y: 2.8823924}
-      - {x: 0.9922123, y: 2.8341563}
-      - {x: 0.8550434, y: 2.8375778}
-      - {x: 0.7185936, y: 2.9066584}
-      - {x: 0.49539566, y: 2.8915408}
-      - {x: 0.18566895, y: 2.9400723}
-      - {x: -0.03087616, y: 2.921692}
-      - {x: -0.26420403, y: 2.857759}
-      - {x: -0.4931984, y: 2.9066162}
-      - {x: -0.7825146, y: 2.8841903}
-      - {x: -1.2564259, y: 2.858451}
-      - {x: -1.4933815, y: 2.922473}
-      - {x: -1.5, y: -1.140625}
+  serializedVersion: 2
+  m_Size: {x: 3, y: 5.98582}
+  m_EdgeRadius: 0
