@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    //liczba żyć gracza
+    public int lives = 3;
+    //ostatni zdobyty checkpoint
+    public Transform checkpoint;
+
     public float speed = 1500.0f;
     public float jumpForce = 18.0f;
 
@@ -55,6 +61,22 @@ public class Player : MonoBehaviour
         if (_bomb != null)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    public void LooseLife()
+    {
+        lives--;
+
+        if (lives > 0)
+        {
+            //jeśli gracz wciąż ma jakieś życia to cofa go na pozycję ostatniego checkpointa
+            transform.position = checkpoint.position;
+        }
+        else if (lives <= 0)
+        {
+            //jesli gracz nie ma juz żyć, trafia do sceny game over
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }
