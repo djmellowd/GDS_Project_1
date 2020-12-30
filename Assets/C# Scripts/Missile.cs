@@ -9,4 +9,13 @@ public class Missile : MonoBehaviour
     {
         transform.Translate(0, speed * Time.deltaTime, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 11)
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
