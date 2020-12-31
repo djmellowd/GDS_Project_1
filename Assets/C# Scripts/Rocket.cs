@@ -3,7 +3,13 @@ using System.Collections;
 
 public class Rocket : MonoBehaviour
 {
-    public float speed = 0.3f;
+    public float speed = 2.0f;
+    public Player player;
+
+    void Start()
+    {
+        player = FindObjectOfType<Player>();
+    }
 
     void Update()
     {
@@ -12,11 +18,14 @@ public class Rocket : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Player _player = col.GetComponent<Player>();
-        if (_player != null)
+        if (col.gameObject.layer == 10)
         {
-            Destroy(_player.gameObject);
+            player.LooseLife();
         }
-        Destroy(this.gameObject);
+        else if (col.gameObject.layer == 12)
+        {
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
