@@ -9,7 +9,12 @@ public class Player : MonoBehaviour
     //ostatni zdobyty checkpoint
     public Transform checkpoint;
 
-    public float speed = 1500.0f;
+    float speed = 5;
+    float maxSpeed = 20;
+    float minSpeed = 5;
+    float accelaration = 2;
+    float deaccelaration = -2;
+    
     public float jumpForce = 18.0f;
 
     private Rigidbody2D _body;
@@ -28,10 +33,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        float deltaX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        Vector2 movement = new Vector2(deltaX, _body.velocity.y);
-        _body.velocity = movement;
-
         Vector3 max = _box.bounds.max;
         Vector3 min = _box.bounds.min;
         Vector2 corner1 = new Vector2(max.x, min.y - .1f);
@@ -48,6 +49,18 @@ public class Player : MonoBehaviour
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+
+        if (Input.GetKey(KeyCode.C) && speed < maxSpeed && grounded)
+        {
+            transform.Translate(new Vector2(1, _body.velocity.y) * accelaration * Time.deltaTime);
+            speed = speed + accelaration;
+        }
+        else if (Input.GetKey(KeyCode.Z) && speed > minSpeed && grounded)
+        {
+            transform.Translate(new Vector2(-1, _body.velocity.y) * deaccelaration * Time.deltaTime);
+            speed = speed + deaccelaration;
+        }
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         if (Input.GetButtonDown("Fire"))
         {
