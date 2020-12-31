@@ -50,12 +50,12 @@ public class Player : MonoBehaviour
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKey(KeyCode.C) && speed < maxSpeed && grounded)
+        if (Input.GetKey(KeyCode.D) && speed < maxSpeed && grounded)
         {
             transform.Translate(new Vector2(1, _body.velocity.y) * accelaration * Time.deltaTime);
             speed = speed + accelaration;
         }
-        else if (Input.GetKey(KeyCode.Z) && speed > minSpeed && grounded)
+        else if (Input.GetKey(KeyCode.A) && speed > minSpeed && grounded)
         {
             transform.Translate(new Vector2(-1, _body.velocity.y) * deaccelaration * Time.deltaTime);
             speed = speed + deaccelaration;
