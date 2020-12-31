@@ -9,11 +9,11 @@ public class Player : MonoBehaviour
     //ostatni zdobyty checkpoint
     public Transform checkpoint;
 
-    float speed = 5;
-    float maxSpeed = 20;
-    float minSpeed = 5;
-    float accelaration = 2;
-    float deaccelaration = -2;
+    [SerializeField] float speed = 5;
+    [SerializeField] float maxSpeed = 20;
+    [SerializeField] float minSpeed = 5;
+    [SerializeField] float accelaration = 2;
+    [SerializeField] float deaccelaration = -2;
     
     public float jumpForce = 18.0f;
 
