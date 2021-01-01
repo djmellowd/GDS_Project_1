@@ -10,9 +10,9 @@ public class Player : MonoBehaviour
     public Transform checkpoint;
 
     [SerializeField] float speed = 5;
-    [SerializeField] float maxSpeed = 20;
-    [SerializeField] float minSpeed = 5;
-    [SerializeField] float accelaration = 2;
+    [SerializeField] float maxSpeed = 15;
+    [SerializeField] float minSpeed = 3;
+    [SerializeField] float accelaration = 1;
     [SerializeField] float deaccelaration = -2;
     
     public float jumpForce = 18.0f;
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
 
         if (grounded && Input.GetButtonDown("Jump"))
         {
-            _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            _body.velocity = new Vector2(speed, jumpForce);
         }
 
         if (Input.GetAxis("Horizontal") > 0 && speed < maxSpeed && grounded)

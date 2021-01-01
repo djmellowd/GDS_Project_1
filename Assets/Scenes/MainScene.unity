@@ -6333,17 +6333,17 @@ PrefabInstance:
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: maxSpeed
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: minSpeed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
@@ -6353,7 +6353,12 @@ PrefabInstance:
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: accelaration
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
+        type: 3}
+      propertyPath: deaccelaration
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390116, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
