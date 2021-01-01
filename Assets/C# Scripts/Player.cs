@@ -9,11 +9,12 @@ public class Player : MonoBehaviour
     //ostatni zdobyty checkpoint
     public Transform checkpoint;
 
-    [SerializeField] float speed = 5;
-    [SerializeField] float maxSpeed = 15;
-    [SerializeField] float minSpeed = 3;
-    [SerializeField] float accelaration = 1;
-    [SerializeField] float deaccelaration = -2;
+    [SerializeField] public float speed2 = 6;
+    [SerializeField] public float speed3 = 9;
+    [SerializeField] public float speed4 = 12;
+    [SerializeField] public float speed5 = 15;
+    [SerializeField] public float speed1 = 3;
+    public float currentSpeed;
     
     public float jumpForce = 18.0f;
 
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        currentSpeed = speed2;
+
         _body = GetComponent<Rigidbody2D>();
         _box = GetComponent<PolygonCollider2D>();
     }
@@ -47,20 +50,56 @@ public class Player : MonoBehaviour
 
         if (grounded && Input.GetButtonDown("Jump"))
         {
-            _body.velocity = new Vector2(speed, jumpForce);
+            _body.velocity = new Vector2(currentSpeed, jumpForce);
         }
 
-        if (Input.GetAxis("Horizontal") > 0 && speed < maxSpeed && grounded)
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.Translate(new Vector2(1, _body.velocity.y) * accelaration * Time.deltaTime);
-            speed = speed + accelaration;
+            if (currentSpeed == speed2)
+            {
+                currentSpeed = speed3;
+            }
+            else if (currentSpeed == speed3)
+            {
+                currentSpeed = speed4;
+            }
+            else if (currentSpeed == speed4)
+            {
+                currentSpeed = speed5;
+            }
+            else if (currentSpeed == speed5)
+            {
+                currentSpeed = speed5;
+            }
+            else if (currentSpeed == speed1)
+            {
+                currentSpeed = speed2;
+            }
         }
-        else if (Input.GetAxis("Horizontal") < 0 && speed > minSpeed && grounded)
+        else if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.Translate(new Vector2(-1, _body.velocity.y) * deaccelaration * Time.deltaTime);
-            speed = speed + deaccelaration;
+            if (currentSpeed == speed2)
+            {
+                currentSpeed = speed1;
+            }
+            else if (currentSpeed == speed3)
+            {
+                currentSpeed = speed2;
+            }
+            else if (currentSpeed == speed4)
+            {
+                currentSpeed = speed3;
+            }
+            else if (currentSpeed == speed5)
+            {
+                currentSpeed = speed4;
+            }
+            else if (currentSpeed == speed1)
+            {
+                currentSpeed = speed1;
+            }
         }
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
 
         if (Input.GetButtonDown("Fire"))
         {
@@ -86,6 +125,7 @@ public class Player : MonoBehaviour
 
         if (lives > 0)
         {
+            currentSpeed = speed2;
             //jeśli gracz wciąż ma jakieś życia to cofa go na pozycję ostatniego checkpointa
             transform.position = checkpoint.position;
         }
