@@ -66,6 +66,9 @@ public class Player : MonoBehaviour
         {
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f, transform.rotation) as GameObject;
             _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 3.0f, transform.rotation) as GameObject;
+
+            //w oryginale rakieta z przodu ma ograniczony zasięg, żeby nie mogła doleciec za daleko
+            Destroy(_missile2, 0.6f);
         }
     }
     void OnTriggerEnter2D(Collider2D col)
