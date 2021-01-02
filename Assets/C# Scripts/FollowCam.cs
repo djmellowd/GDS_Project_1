@@ -6,8 +6,6 @@ public class FollowCam : MonoBehaviour
     public Transform target;
     public float smoothTime = 0.2f;
 
-    Camera _camera;
-    float ViewPositionX, ViewPositionY, ViewWidth, ViewHeight;
     Player _player;
 
     private Vector3 _velocity = Vector3.zero;

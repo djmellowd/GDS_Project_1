@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 18.0f;
 
     private Rigidbody2D _body;
-    private PolygonCollider2D _box;
+    public PolygonCollider2D _box;
 
     [SerializeField] private GameObject missilePrefab;
     [SerializeField] private GameObject missile2Prefab;
