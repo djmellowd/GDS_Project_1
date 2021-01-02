@@ -3,15 +3,12 @@ using System.Collections;
 
 public class Wheel : MonoBehaviour
 {
-    [SerializeField] float speed = 5f;
-    [SerializeField] float height = 0.05f;
-
-    Vector2 pos;
+    PlayerCollider m_playerCollider;
     Player _player;
 
     void Start()
     {
-        pos = transform.position;
+        m_playerCollider = GetComponent<PlayerCollider>();
         _player = FindObjectOfType<Player>();
     }
 
@@ -19,7 +16,9 @@ public class Wheel : MonoBehaviour
     {
         transform.Rotate(0, 0, -1);
 
-        float newY = Mathf.Sin(Time.time * speed) * height + pos.y;
-        transform.position = new Vector2(transform.position.x, newY);
+        if (m_playerCollider.IsOnGround == false)
+        {
+            transform.position = new Vector2(_player.transform.position.x, _player.transform.position.y - 0.5f);
+        }
     }
 }
