@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] public float speed1 = 3;
     public float currentSpeed;
     
-    public float jumpForce = 18.0f;
+    public float jumpForce = 0.0001f;
 
     private Rigidbody2D _body;
     public PolygonCollider2D _box;

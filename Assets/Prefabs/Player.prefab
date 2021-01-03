@@ -149,7 +149,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1329902253
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 81ac54f2cf1fede4ab1bd5195a04f2a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -230,7 +230,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1329902253
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 81ac54f2cf1fede4ab1bd5195a04f2a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -311,7 +311,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1329902253
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 81ac54f2cf1fede4ab1bd5195a04f2a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -399,7 +399,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1329902253
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 50bf3284cc9a537428406508b25e658d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -447,8 +447,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   checkpoint: {fileID: 0}
-  speed: 1500
-  jumpForce: 18
+  speed2: 6
+  speed3: 9
+  speed4: 12
+  speed5: 15
+  speed1: 3
+  currentSpeed: 0
+  jumpForce: 0.0001
+  _box: {fileID: 0}
   missilePrefab: {fileID: 7965578094682039791, guid: 0c81aedc3b0bb704094575717152cf4d,
     type: 3}
   missile2Prefab: {fileID: 4980407946253456780, guid: 1aad6e2ab22b434489171befbe07cf5e,
