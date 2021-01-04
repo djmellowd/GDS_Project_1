@@ -26,6 +26,11 @@ public class Player : MonoBehaviour
     private GameObject _missile;
     private GameObject _missile2;
 
+    private bool hasPressedAccel;
+    private bool hasPressedDeAccel;
+    private float pressedAccelTime;
+    private float pressedDeAccelTime;
+
     void Start()
     {
         currentSpeed = speed2;
@@ -50,11 +55,16 @@ public class Player : MonoBehaviour
 
         if (grounded && Input.GetButtonDown("Jump"))
         {
-            _body.velocity = new Vector2(currentSpeed, jumpForce);
+            _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
+            hasPressedAccel = true;
+            pressedAccelTime = Time.time;
+        }
+        if (grounded && hasPressedAccel && Time.time - pressedAccelTime > 0.5f)
+        {
             if (currentSpeed == speed2)
             {
                 currentSpeed = speed3;
@@ -75,8 +85,14 @@ public class Player : MonoBehaviour
             {
                 currentSpeed = speed2;
             }
+            hasPressedAccel = false;
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            hasPressedDeAccel = true;
+            pressedDeAccelTime = Time.time;
+        }
+        if (grounded && hasPressedDeAccel && Time.time - pressedDeAccelTime > 0.5f)
         {
             if (currentSpeed == speed2)
             {
@@ -98,6 +114,7 @@ public class Player : MonoBehaviour
             {
                 currentSpeed = speed1;
             }
+            hasPressedDeAccel = false;
         }
         transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
 
