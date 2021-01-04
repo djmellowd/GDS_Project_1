@@ -82,58 +82,28 @@ public class Player : MonoBehaviour
             hasPressedAccel = true;
             pressedAccelTime = Time.time;
         }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            hasPressedAccel = false;
+            StopCoroutine("Accel");
+        }
         if (grounded && hasPressedAccel && Time.time - pressedAccelTime > 0.5f)
         {
-            if (currentSpeed == speed2)
-            {
-                currentSpeed = speed3;
-            }
-            else if (currentSpeed == speed3)
-            {
-                currentSpeed = speed4;
-            }
-            else if (currentSpeed == speed4)
-            {
-                currentSpeed = speed5;
-            }
-            else if (currentSpeed == speed5)
-            {
-                currentSpeed = speed5;
-            }
-            else if (currentSpeed == speed1)
-            {
-                currentSpeed = speed2;
-            }
-            hasPressedAccel = false;
+            StartCoroutine("Accel");
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             hasPressedDeAccel = true;
             pressedDeAccelTime = Time.time;
         }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            hasPressedDeAccel = false;
+            StopCoroutine("DeAccel");
+        }
         if (grounded && hasPressedDeAccel && Time.time - pressedDeAccelTime > 0.5f)
         {
-            if (currentSpeed == speed2)
-            {
-                currentSpeed = speed1;
-            }
-            else if (currentSpeed == speed3)
-            {
-                currentSpeed = speed2;
-            }
-            else if (currentSpeed == speed4)
-            {
-                currentSpeed = speed3;
-            }
-            else if (currentSpeed == speed5)
-            {
-                currentSpeed = speed4;
-            }
-            else if (currentSpeed == speed1)
-            {
-                currentSpeed = speed1;
-            }
-            hasPressedDeAccel = false;
+            StartCoroutine("DeAccel");
         }
         transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
 
@@ -148,6 +118,73 @@ public class Player : MonoBehaviour
 
         CheckForHighscore();
     }
+
+    IEnumerator Accel()
+    {
+        if (currentSpeed == speed1)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed2;
+        }
+        if (currentSpeed == speed2)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed3;
+        }
+        if (currentSpeed == speed3)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed4;
+        }
+        if (currentSpeed == speed4)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed5;
+        }
+        if (currentSpeed == speed5)
+        {
+            currentSpeed = speed5;
+        }
+        hasPressedAccel = false;
+    }
+
+    IEnumerator DeAccel()
+    {
+        if (currentSpeed == speed5)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed4;
+        }
+        if (currentSpeed == speed4)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed3;
+        }
+        if (currentSpeed == speed3)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed2;
+        }
+        if (currentSpeed == speed2)
+        {
+            yield return new
+            WaitForSeconds(0.5f);
+            currentSpeed = speed1;
+        }
+        if (currentSpeed == speed1)
+        {
+            currentSpeed = speed1;
+        }
+        hasPressedDeAccel = false;
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         Bomb _bomb = col.GetComponent<Bomb>();
