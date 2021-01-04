@@ -9,6 +9,9 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
+        //zerowanie wyniku na starcie
+        Player.score = 0;
+
         Invoke("NewEnemies", 1);
     }
 

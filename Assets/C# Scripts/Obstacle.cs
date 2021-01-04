@@ -19,6 +19,7 @@ public class Obstacle : MonoBehaviour
         }
         else if (collision.gameObject.layer == 9)
         {
+            Player.score += 100;
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

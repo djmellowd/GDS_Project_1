@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    //score i highscore. zmienne statyczne po to, zeby był do nich dostęp w innych scenach
+    public static int score;
+    public static int highscore;
+
     //liczba żyć gracza
     public int lives = 3;
     //ostatni zdobyty checkpoint
@@ -141,6 +145,8 @@ public class Player : MonoBehaviour
             //w oryginale rakieta z przodu ma ograniczony zasięg, żeby nie mogła doleciec za daleko
             Destroy(_missile2, 0.6f);
         }
+
+        CheckForHighscore();
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -151,6 +157,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //utrata życia
     public void LooseLife()
     {
         lives--;
@@ -165,6 +172,15 @@ public class Player : MonoBehaviour
         {
             //jesli gracz nie ma juz żyć, trafia do sceny game over
             SceneManager.LoadScene("GameOverScene");
+        }
+    }
+
+    //sprawdzenie, czy highscore nie został pobity
+    void CheckForHighscore ()
+    {
+        if  (score > highscore)
+        {
+            highscore = score;
         }
     }
 }
