@@ -91,6 +91,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3921403304799648857}
   - component: {fileID: 2219726889883925560}
+  - component: {fileID: 37128828}
+  - component: {fileID: 37128827}
   m_Layer: 10
   m_Name: wheel
   m_TagString: Untagged
@@ -162,6 +164,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &37128828
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522879620030648947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21ea23e326df3624584dbe1fa25e8587, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &37128827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522879620030648947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed3672a17e7b764b8c553dbff80e1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7040941257624641635
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +205,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7546019269501196226}
   - component: {fileID: 6353862259044491153}
+  - component: {fileID: 1354143597}
+  - component: {fileID: 1354143599}
   m_Layer: 10
   m_Name: wheel (2)
   m_TagString: Untagged
@@ -243,6 +278,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1354143597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7040941257624641635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed3672a17e7b764b8c553dbff80e1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1354143599
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7040941257624641635}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21ea23e326df3624584dbe1fa25e8587, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7752062910379878394
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +319,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9178908725910713138}
   - component: {fileID: 8943204203627384601}
+  - component: {fileID: 167471284}
+  - component: {fileID: 167471286}
   m_Layer: 10
   m_Name: wheel (1)
   m_TagString: Untagged
@@ -324,6 +392,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &167471284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752062910379878394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed3672a17e7b764b8c553dbff80e1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &167471286
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752062910379878394}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21ea23e326df3624584dbe1fa25e8587, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8147018720379390118
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +552,7 @@ MonoBehaviour:
   speed5: 15
   speed1: 3
   currentSpeed: 0
-  jumpForce: 0.0001
+  jumpForce: 18
   _box: {fileID: 0}
   missilePrefab: {fileID: 7965578094682039791, guid: 0c81aedc3b0bb704094575717152cf4d,
     type: 3}
