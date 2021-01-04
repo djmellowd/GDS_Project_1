@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
     
     public float jumpForce = 0.0001f;
 
+    //animatory kół
+    public Animator wheel1Anim;
+    public Animator wheel2Anim;
+    public Animator wheel3Anim;
+
     private Rigidbody2D _body;
     public PolygonCollider2D _box;
 
@@ -51,11 +56,21 @@ public class Player : MonoBehaviour
         if (hit != null)
         {
             grounded = true;
+
+            //kółka w dół
+            wheel1Anim.SetBool("isJumping", false);
+            wheel2Anim.SetBool("isJumping", false);
+            wheel3Anim.SetBool("isJumping", false);
         }
 
         if (grounded && Input.GetButtonDown("Jump"))
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+            //kółka do góry
+            wheel1Anim.SetBool("isJumping", true);
+            wheel2Anim.SetBool("isJumping", true);
+            wheel3Anim.SetBool("isJumping", true);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
