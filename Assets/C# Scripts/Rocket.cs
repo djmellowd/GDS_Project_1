@@ -3,19 +3,25 @@ using System.Collections;
 
 public class Rocket : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 15.0f;
     public Player player;
-    private Transform target;
+    private Rigidbody2D target;
+    private Vector2 moveDirection;
+    private Rigidbody2D rb;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+        moveDirection = (target.transform.position - transform.position).normalized * speed;
+        rb.velocity = new Vector2(moveDirection.x + 20, moveDirection.y);
+        Destroy(gameObject, 3f);
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, moveDirection, speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D col)
