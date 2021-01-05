@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 335231119728652653}
   - component: {fileID: 335231119728652654}
   - component: {fileID: 335231119728652655}
+  - component: {fileID: 4675629511675703768}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Untagged
@@ -137,6 +138,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4675629511675703768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335231119728652648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7680b6728ac20b242a8eb24e63643b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4129987029348291519
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9155420101704178933}
   - component: {fileID: 1128848725760198862}
+  - component: {fileID: 5333189984515448380}
   m_Layer: 0
   m_Name: Score Check
   m_TagString: Untagged
@@ -181,7 +195,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.034398958, y: 4.6985793}
+  m_Offset: {x: 0.034398958, y: 5.6591187}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -192,5 +206,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28908578, y: 9.042846}
+  m_Size: {x: 0.28908578, y: 7.121767}
   m_EdgeRadius: 0
+--- !u!114 &5333189984515448380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129987029348291519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1934c0416400b8b49afbebef78ee0217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
