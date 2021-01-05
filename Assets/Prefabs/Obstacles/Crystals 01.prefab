@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8543382388703755586}
   - component: {fileID: 6467369538916494125}
   - component: {fileID: 658561223765174394}
+  - component: {fileID: -4730029445134559377}
   m_Layer: 0
   m_Name: Crystals 01
   m_TagString: Untagged
@@ -137,6 +138,18 @@ PolygonCollider2D:
       - {x: -0.515625, y: -0.1796875}
       - {x: -0.515625, y: -0.0390625}
       - {x: -0.578125, y: 0.0234375}
+--- !u!114 &-4730029445134559377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659755945162726908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7680b6728ac20b242a8eb24e63643b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8451547600245090442
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6262480880006815930}
   - component: {fileID: 1434035444196487405}
+  - component: {fileID: 1465830246033613328}
   m_Layer: 0
   m_Name: Score Check
   m_TagString: Untagged
@@ -194,3 +208,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 9.720002}
   m_EdgeRadius: 0
+--- !u!114 &1465830246033613328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8451547600245090442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1934c0416400b8b49afbebef78ee0217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

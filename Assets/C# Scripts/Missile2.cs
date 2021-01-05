@@ -22,8 +22,11 @@ public class Missile2 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 11 || collision.gameObject.layer == 12) //trafienie wroga (layer 11) lub wrogiego pocisku (layer 12)
         {
+            //+100 pkt za podstawowego wroga
+            Player.score += 100;
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
