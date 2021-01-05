@@ -3,20 +3,33 @@ using System.Collections;
 
 public class BasicFlyingAI : MonoBehaviour
 {
-    public float speed = 0;
+    public float speed = 15f;
     Player _player;
     private Transform target;
+
+    private float rotateSpeed = 3f;
+    private float radius = 2f;
+
+    private Vector2 _centre;
+    private float _angle;
 
     void Start()
     {
         _player = FindObjectOfType<Player>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         speed = _player.currentSpeed + 5.0f;
+        _centre = transform.position;
     }
 
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        _angle += rotateSpeed * Time.deltaTime;
+
+        var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
+        transform.position = _centre + offset;
+
+        transform.Translate(transform.position.x + speed * Time.deltaTime, 0, 0);
+        
         Invoke("Following", 12);
     }
 

@@ -43,6 +43,13 @@ public class SceneController : MonoBehaviour
         Invoke("NewEnemiesII3", 183);
     }
 
+    void Update()
+    {
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        if (screenPosition.y > Screen.height || screenPosition.y < 0)
+        Destroy(this.gameObject);
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         Destroy(col.gameObject);
@@ -51,12 +58,12 @@ public class SceneController : MonoBehaviour
     void NewEnemiesI2()
     {
         _enemy = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy.transform.position = new Vector3(-15, 9, 0);
+        _enemy.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 15, 0));
         float angle = 0;
         _enemy.transform.Rotate(0, angle, 0);
 
         _enemy2 = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy2.transform.position = new Vector3(5, 9, 0);
+        _enemy2.transform.position = new Vector3(5, 7, 0);
         _enemy2.transform.Rotate(0, angle, 0);
     }
 

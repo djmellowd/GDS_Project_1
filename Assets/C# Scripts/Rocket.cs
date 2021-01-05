@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Rocket : MonoBehaviour
 {
-    public float speed = 15.0f;
+    public float speed = 10.0f;
     public Player player;
     private Rigidbody2D target;
     private Vector2 moveDirection;
