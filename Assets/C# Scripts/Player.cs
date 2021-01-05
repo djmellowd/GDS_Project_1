@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
     
     public float jumpForce = 0.0001f;
 
+    //efekt wybuchu
+    public GameObject explosionFX;
+
     //animatory kół
     public Animator wheel1Anim;
     public Animator wheel2Anim;
@@ -197,6 +200,7 @@ public class Player : MonoBehaviour
     //utrata życia
     public void LooseLife()
     {
+        GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
         lives--;
 
         if (lives > 0)

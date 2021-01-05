@@ -336,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7752062910379878394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4375, y: -0.5625, z: 0}
+  m_LocalPosition: {x: -0.4375, y: -0.49306, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8147018720379390116}
@@ -553,6 +553,11 @@ MonoBehaviour:
   speed1: 3
   currentSpeed: 0
   jumpForce: 18
+  explosionFX: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
+  wheel1Anim: {fileID: 37128828}
+  wheel2Anim: {fileID: 167471286}
+  wheel3Anim: {fileID: 1354143599}
   _box: {fileID: 0}
   missilePrefab: {fileID: 7965578094682039791, guid: 0c81aedc3b0bb704094575717152cf4d,
     type: 3}
