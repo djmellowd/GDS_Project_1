@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4596840401561750581}
   - component: {fileID: 6794699686641632569}
   - component: {fileID: 2025185357804855752}
+  - component: {fileID: -456070006790503756}
   m_Layer: 0
   m_Name: Crystals 03
   m_TagString: Untagged
@@ -130,6 +131,18 @@ PolygonCollider2D:
       - {x: 0.84375, y: -0.2578125}
       - {x: 0.953125, y: -0.0078125}
       - {x: 0.953125, y: 0.1328125}
+--- !u!114 &-456070006790503756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010779516240436843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7680b6728ac20b242a8eb24e63643b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4539353174544362349
 GameObject:
   m_ObjectHideFlags: 0
