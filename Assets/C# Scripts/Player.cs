@@ -13,11 +13,15 @@ public class Player : MonoBehaviour
     //ostatni zdobyty checkpoint
     public Transform checkpoint;
 
+    [SerializeField] float initialSpeed = 6f;
+
+    /*
     [SerializeField] public float speed2 = 6;
     [SerializeField] public float speed3 = 9;
     [SerializeField] public float speed4 = 12;
     [SerializeField] public float speed5 = 15;
     [SerializeField] public float speed1 = 3;
+    */
     public float currentSpeed;
     
     public float jumpForce = 0.0001f;
@@ -50,7 +54,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        currentSpeed = speed2;
+        currentSpeed = initialSpeed;
 
         _body = GetComponent<Rigidbody2D>();
         _box = GetComponent<PolygonCollider2D>();
@@ -144,6 +148,7 @@ public class Player : MonoBehaviour
         CheckForHighscore();
     }
 
+    /*
     IEnumerator Accel()
     {
         if (currentSpeed == speed1)
@@ -209,6 +214,7 @@ public class Player : MonoBehaviour
         }
         hasPressedDeAccel = false;
     }
+    */
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -227,7 +233,7 @@ public class Player : MonoBehaviour
 
         if (lives > 0)
         {
-            currentSpeed = speed2;
+            currentSpeed = initialSpeed;
             //jeśli gracz wciąż ma jakieś życia to cofa go na pozycję ostatniego checkpointa
             transform.position = checkpoint.position;
         }

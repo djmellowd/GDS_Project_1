@@ -17,9 +17,10 @@ public class FollowCam : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 targetPosition = new Vector3(target.position.x, transform.position.y, transform.position.z);
+        Vector3 targetPosition = new Vector3(target.position.x + 5, transform.position.y, transform.position.z);
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, smoothTime);
 
+        /*
         if (_player.currentSpeed == _player.speed2)
         {
             var zoom = 8;
@@ -45,5 +46,6 @@ public class FollowCam : MonoBehaviour
             var zoom = 7;
             Camera.main.orthographicSize = zoom;
         }
+        */
     }
 }
