@@ -43,6 +43,10 @@ public class Player : MonoBehaviour
     private float pressedAccelTime;
     private float pressedDeAccelTime;
 
+    //testowe prędkości
+    [SerializeField]float maxSpeed = 15f;
+    [SerializeField]float minSpeed = 3f;
+
     void Start()
     {
         currentSpeed = speed2;
@@ -80,6 +84,18 @@ public class Player : MonoBehaviour
             wheel3Anim.SetBool("isJumping", true);
         }
 
+        //--------MOJA PROPOZYCJA PRZYSPIESZANIA/SPOWALNIANIA-----------------
+        if (Input.GetAxis("Horizontal") > 0 && currentSpeed <= maxSpeed)
+        {
+            currentSpeed += 5f * Time.deltaTime;
+        }
+        else if (Input.GetAxis("Horizontal") < 0 && currentSpeed >= minSpeed)
+        {
+            currentSpeed -= 5f * Time.deltaTime;
+        }
+        //--------------------------------------------------------------------
+
+        /*
         if (Input.GetKeyDown(KeyCode.D))
         {
             hasPressedAccel = true;
@@ -108,6 +124,7 @@ public class Player : MonoBehaviour
         {
             StartCoroutine("DeAccel");
         }
+        */
         transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
 
         if (Input.GetButtonDown("Fire"))

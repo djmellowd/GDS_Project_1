@@ -2215,7 +2215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.99
+  parallaxEffect: 0.999
 --- !u!1 &643472781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,7 +2444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.96
+  parallaxEffect: 0.995
 --- !u!1001 &675339025
 PrefabInstance:
   m_ObjectHideFlags: 0
