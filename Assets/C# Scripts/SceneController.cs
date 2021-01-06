@@ -58,124 +58,124 @@ public class SceneController : MonoBehaviour
     void NewEnemiesI2()
     {
         _enemy = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 15, 0));
+        _enemy.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy.transform.Rotate(0, angle, 0);
 
         _enemy2 = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy2.transform.position = new Vector3(5, 7, 0);
+        _enemy2.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy2.transform.Rotate(0, angle, 0);
     }
 
     void NewEnemiesI3()
     {
         _enemy = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy.transform.position = new Vector3(-15, 9, 0);
+        _enemy.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy.transform.Rotate(0, angle, 0);
 
         _enemy2 = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy2.transform.position = new Vector3(5, 9, 0);
+        _enemy2.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy2.transform.Rotate(0, angle, 0);
 
         _enemy3 = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy3.transform.position = new Vector3(0, 9, 0);
+        _enemy3.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 250, Screen.height - 200, 0));
         _enemy3.transform.Rotate(0, angle, 0);
     }
 
     void NewEnemiesI4()
     {
         _enemy = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy.transform.position = new Vector3(-15, 9, 0);
+        _enemy.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy.transform.Rotate(0, angle, 0);
 
         _enemy2 = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy2.transform.position = new Vector3(5, 9, 0);
+        _enemy2.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy2.transform.Rotate(0, angle, 0);
 
         _enemy3 = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy3.transform.position = new Vector3(0, 9, 0);
+        _enemy3.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 250, Screen.height - 200, 0));
         _enemy3.transform.Rotate(0, angle, 0);
 
         _enemy4 = Instantiate(Enemy01Prefab) as GameObject;
-        _enemy4.transform.position = new Vector3(-10, 9, 0);
+        _enemy4.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 750, Screen.height - 200, 0));
         _enemy4.transform.Rotate(0, angle, 0);
     }
 
     void NewEnemiesII2()
     {
         _enemy5 = Instantiate(Enemy02Prefab) as GameObject;
-        _enemy5.transform.position = new Vector3(-15, 9, 0);
+        _enemy5.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy5.transform.Rotate(0, angle, 0);
 
         _enemy6 = Instantiate(Enemy02Prefab) as GameObject;
-        _enemy6.transform.position = new Vector3(5, 9, 0);
+        _enemy6.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy6.transform.Rotate(0, angle, 0);
     }
 
     void NewEnemiesII3()
     {
         _enemy5 = Instantiate(Enemy02Prefab) as GameObject;
-        _enemy5.transform.position = new Vector3(-15, 9, 0);
+        _enemy5.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy5.transform.Rotate(0, angle, 0);
 
         _enemy6 = Instantiate(Enemy02Prefab) as GameObject;
-        _enemy6.transform.position = new Vector3(5, 9, 0);
+        _enemy6.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy6.transform.Rotate(0, angle, 0);
 
         _enemy7 = Instantiate(Enemy02Prefab) as GameObject;
-        _enemy7.transform.position = new Vector3(0, 9, 0);
+        _enemy7.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 250, Screen.height - 200, 0));
         _enemy7.transform.Rotate(0, angle, 0);
     }
 
     void NewEnemiesIII2()
     {
         _enemy8 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy8.transform.position = new Vector3(-15, 9, 0);
+        _enemy8.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy8.transform.Rotate(0, angle, 0);
 
         _enemy9 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy9.transform.position = new Vector3(5, 9, 0);
+        _enemy9.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy9.transform.Rotate(0, angle, 0);
     }
 
     void NewEnemiesIII3()
     {
         _enemy8 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy8.transform.position = new Vector3(-15, 9, 0);
+        _enemy8.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy8.transform.Rotate(0, angle, 0);
 
         _enemy9 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy9.transform.position = new Vector3(5, 9, 0);
+        _enemy9.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy9.transform.Rotate(0, angle, 0);
 
         _enemy10 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy10.transform.position = new Vector3(0, 9, 0);
+        _enemy10.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 250, Screen.height - 200, 0));
         _enemy10.transform.Rotate(0, angle, 0);
     }
 
     void NewEnemiesIII4()
     {
         _enemy8 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy8.transform.position = new Vector3(-15, 9, 0);
+        _enemy8.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy8.transform.Rotate(0, angle, 0);
 
         _enemy9 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy9.transform.position = new Vector3(5, 9, 0);
+        _enemy9.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy9.transform.Rotate(0, angle, 0);
 
         _enemy10 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy10.transform.position = new Vector3(0, 9, 0);
+        _enemy10.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 250, Screen.height - 200, 0));
         _enemy10.transform.Rotate(0, angle, 0);
 
         _enemy11 = Instantiate(Enemy03Prefab) as GameObject;
-        _enemy11.transform.position = new Vector3(-10, 9, 0);
+        _enemy11.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 750, Screen.height - 200, 0));
         _enemy11.transform.Rotate(0, angle, 0);
     }
 }
