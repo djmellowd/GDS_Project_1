@@ -43,10 +43,12 @@ public class Player : MonoBehaviour
     private GameObject _missile2;
     private Camera cam;
 
+    /*
     private bool hasPressedAccel;
     private bool hasPressedDeAccel;
     private float pressedAccelTime;
     private float pressedDeAccelTime;
+    */
 
     //testowe prędkości
     [SerializeField]float maxSpeed = 15f;
