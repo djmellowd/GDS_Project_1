@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     private Player player;
+    public GameObject explosionFX;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Obstacle : MonoBehaviour
         else if (collision.gameObject.layer == 9)
         {
             Player.score += 100;
+            GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

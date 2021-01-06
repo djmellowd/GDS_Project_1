@@ -4,6 +4,7 @@ using System.Collections;
 public class Missile2 : MonoBehaviour
 {
     public float speed = 5.0f;
+    public GameObject alienExplosionFX;
 
     void Update()
     {
@@ -27,6 +28,7 @@ public class Missile2 : MonoBehaviour
             //+100 pkt za podstawowego wroga
             Player.score += 100;
 
+            GameObject boom = Instantiate(alienExplosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
