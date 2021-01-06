@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
         //--------MOJA PROPOZYCJA PRZYSPIESZANIA/SPOWALNIANIA-----------------
         if (Input.GetAxis("Horizontal") > 0 && currentSpeed <= maxSpeed)
         {
+            //testowo współczynnik przyspieszenia zahardcodowałem na 5, ale to kwestia do ustalenia
             currentSpeed += 5f * Time.deltaTime;
         }
         else if (Input.GetAxis("Horizontal") < 0 && currentSpeed >= minSpeed)
