@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BasicFlyingAI : MonoBehaviour
 {
-    public float speed = 15f;
+    public float speed = 0;
     Player _player;
     private Transform target;
 
@@ -17,12 +17,13 @@ public class BasicFlyingAI : MonoBehaviour
     {
         _player = FindObjectOfType<Player>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        speed = _player.currentSpeed + 5.0f;
         _centre = transform.position;
     }
 
     void Update()
     {
+        speed = _player.currentSpeed;
+
         _angle += rotateSpeed * Time.deltaTime;
 
         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
