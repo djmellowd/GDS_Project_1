@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject missile2Prefab;
     private GameObject _missile;
     private GameObject _missile2;
+    private Camera cam;
 
     private bool hasPressedAccel;
     private bool hasPressedDeAccel;
@@ -53,6 +54,7 @@ public class Player : MonoBehaviour
 
         _body = GetComponent<Rigidbody2D>();
         _box = GetComponent<PolygonCollider2D>();
+        cam = FindObjectOfType<Camera>();
     }
 
     void Update()
@@ -85,14 +87,16 @@ public class Player : MonoBehaviour
         }
 
         //--------MOJA PROPOZYCJA PRZYSPIESZANIA/SPOWALNIANIA-----------------
-        if (Input.GetAxis("Horizontal") > 0 && currentSpeed <= maxSpeed)
+        if (Input.GetAxis("Horizontal") > 0 && currentSpeed <= maxSpeed && cam.orthographicSize <=12)
         {
             //testowo współczynnik przyspieszenia zahardcodowałem na 5, ale to kwestia do ustalenia
             currentSpeed += 5f * Time.deltaTime;
+            cam.orthographicSize += 1f * Time.deltaTime;
         }
-        else if (Input.GetAxis("Horizontal") < 0 && currentSpeed >= minSpeed)
+        else if (Input.GetAxis("Horizontal") < 0 && currentSpeed >= minSpeed && cam.orthographicSize >= 6)
         {
             currentSpeed -= 5f * Time.deltaTime;
+            cam.orthographicSize -= 1f * Time.deltaTime;
         }
         //--------------------------------------------------------------------
 
