@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BasicFlyingAI : MonoBehaviour
 {
-    public float speed = 0;
+    public float speed;
     Player _player;
     private Transform target;
 
@@ -29,8 +29,6 @@ public class BasicFlyingAI : MonoBehaviour
         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
         transform.position = _centre + offset;
 
-        transform.Translate(transform.position.x + speed * Time.deltaTime, 0, 0);
-        
         Invoke("Following", 12);
     }
 
