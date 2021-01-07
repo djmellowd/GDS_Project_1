@@ -104,6 +104,16 @@ public class Player : MonoBehaviour
             currentSpeed -= 5f * Time.deltaTime;
             cam.orthographicSize -= 1f * Time.deltaTime;
         }
+        else if (Input.GetAxis("Horizontal") == 0 && currentSpeed > initialSpeed && cam.orthographicSize > 8)
+        {
+            currentSpeed -= 5f * Time.deltaTime;
+            cam.orthographicSize -= 1f * Time.deltaTime;
+        }
+        else if (Input.GetAxis("Horizontal") == 0 && currentSpeed < initialSpeed && cam.orthographicSize < 8)
+        {
+            currentSpeed += 5f * Time.deltaTime;
+            cam.orthographicSize += 1f * Time.deltaTime;
+        }
         //--------------------------------------------------------------------
 
         /*

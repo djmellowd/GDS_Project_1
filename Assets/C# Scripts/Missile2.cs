@@ -3,12 +3,19 @@ using System.Collections;
 
 public class Missile2 : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 3.0f;
     public GameObject alienExplosionFX;
+    Player player;
+
+    void Start()
+    {
+        player = FindObjectOfType<Player>();
+    }
+
 
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        transform.Translate((speed + player.currentSpeed) * Time.deltaTime, 0, 0);
     }
 
     void OnTriggerEnter2D(Collider2D col)

@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b10773ab82ab5744b8e045fd04f1cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 3
   alienExplosionFX: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c,
     type: 3}
+  player: {fileID: 0}
 --- !u!50 &7704126224198515102
 Rigidbody2D:
   serializedVersion: 4
@@ -135,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   alienExplosionFX: {fileID: 0}
+  player: {fileID: 0}
 --- !u!70 &2423093100071558613
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
