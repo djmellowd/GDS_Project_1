@@ -4,10 +4,12 @@ using System.Collections;
 public class Rocket : MonoBehaviour
 {
     public float speed = 10.0f;
-    public Player player;
+    public GameObject explosionFX;
+    private Player player;
     private Rigidbody2D target;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
+
 
     void Start()
     {
@@ -32,11 +34,13 @@ public class Rocket : MonoBehaviour
         }
         else if (col.gameObject.layer == 12)
         {
+            GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
         else if (col.gameObject.layer == 13)
         {
+            GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
