@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
             wheel3Anim.SetBool("isJumping", false);
         }
 
-        if (grounded && Input.GetButtonDown("Jump"))
+        if (grounded && Input.GetButtonDown("Jump") && transform.position.y <= -1)
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
