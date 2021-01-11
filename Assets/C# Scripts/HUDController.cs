@@ -10,10 +10,12 @@ public class HUDController : MonoBehaviour
     public TextMeshProUGUI highscoreText;
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI livesText;
+    public TextMeshProUGUI stageText;
     public Image progressBar;
     public Image live1;
     public Image live2;
     public Image live3;
+    public string stage;
 
     [SerializeField] Transform startGamePoint;
     Meta endGamePoint;
@@ -23,13 +25,14 @@ public class HUDController : MonoBehaviour
     float playerDistance;
     float distanceDifference;
 
+
     float timer = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
         endGamePoint = FindObjectOfType<Meta>();
-
+        stage = " ";
         gameLength = Mathf.Abs(endGamePoint.transform.position.x - startGamePoint.position.x);
     }
 
@@ -42,6 +45,7 @@ public class HUDController : MonoBehaviour
         timeText.text = "TIME " + ((int)timer).ToString();
         scoreText.text = Player.score.ToString();
         highscoreText.text = Player.highscore.ToString();
+        stageText.text = "STAGE " + stage;
         ManageLives();
         CountDistance();
     }
