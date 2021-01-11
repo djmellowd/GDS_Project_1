@@ -6,6 +6,7 @@ public class Marker : MonoBehaviour
 {
     public string currentStage;
     public bool checksForBonus;
+    public GameObject bonusScreen;
     HUDController hudController;
     Player player;
 
@@ -19,5 +20,12 @@ public class Marker : MonoBehaviour
     {
         hudController.stage = currentStage;
         player.checkpoint.position = transform.position;
+
+        if (checksForBonus)
+        {
+            bonusScreen.SetActive(true);
+            Time.timeScale = 0f;
+            checksForBonus = false;
+        }
     }
 }
