@@ -80,8 +80,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3621082966880857311}
   - component: {fileID: 5414002382878590007}
-  - component: {fileID: 8780069616579636661}
   - component: {fileID: 2355679707420100428}
+  - component: {fileID: 6116807922266450992}
   m_Layer: 0
   m_Name: Hole 01
   m_TagString: Untagged
@@ -154,32 +154,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8780069616579636661
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6978765497047852798}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.046305418, y: 1.2782642}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 6.125}
-    newSize: {x: 3, y: 6.125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.722168, y: 3.3101156}
-  m_EdgeRadius: 0
 --- !u!114 &2355679707420100428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +166,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77a40894bb05554aa5b321416242373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &6116807922266450992
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978765497047852798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 6.125}
+    newSize: {x: 3, y: 6.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.4375, y: -1.140625}
+      - {x: 1.5, y: -1.109375}
+      - {x: 1.5000002, y: 2.0646255}
+      - {x: 1.3217721, y: 2.903653}
+      - {x: 1.0934708, y: 2.8013716}
+      - {x: 0.9014744, y: 2.8436105}
+      - {x: 0.7284406, y: 2.8352184}
+      - {x: 0.59518796, y: 2.7417474}
+      - {x: 0.5, y: 2.453125}
+      - {x: 0.40625, y: 2.5625}
+      - {x: 0.375, y: 2.5625}
+      - {x: 0.234375, y: 2.46875}
+      - {x: 0.109375, y: 2.546875}
+      - {x: -0.0625, y: 2.59375}
+      - {x: -0.171875, y: 2.71875}
+      - {x: -0.21875, y: 2.703125}
+      - {x: -0.21875, y: 2.5}
+      - {x: -0.453125, y: 2.484375}
+      - {x: -0.8125, y: 2.640625}
+      - {x: -0.875, y: 2.640625}
+      - {x: -1.0625, y: 2.40625}
+      - {x: -1.0999186, y: 2.8045313}
+      - {x: -1.0909339, y: 2.8965096}
+      - {x: -1.1875001, y: 2.9149408}
+      - {x: -1.2363383, y: 2.8826563}
+      - {x: -1.5, y: -1.140625}
