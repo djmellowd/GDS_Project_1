@@ -27497,6 +27497,105 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3163049650462272858, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 374.83197
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650462272858, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030518
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650462272858, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 261
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650462272859, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 43.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650462272859, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 903ad29ce0c84c4498141d1235199803,
+        type: 2}
+    - target: {fileID: 3163049650462272859, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 43.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650462272859, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3799426431448409511, guid: 903ad29ce0c84c4498141d1235199803,
+        type: 2}
+    - target: {fileID: 3163049650462272859, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650462272859, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782214, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 268.19504
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782214, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 23.049362
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782214, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0000038147
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782214, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -127
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782215, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782215, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 903ad29ce0c84c4498141d1235199803,
+        type: 2}
+    - target: {fileID: 3163049650959782215, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782215, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3799426431448409511, guid: 903ad29ce0c84c4498141d1235199803,
+        type: 2}
+    - target: {fileID: 3163049650959782215, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163049650959782215, guid: bf7f1e25efa334c43844a666e59268ca,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3163049651418885888, guid: bf7f1e25efa334c43844a666e59268ca,
         type: 3}
       propertyPath: m_UiScaleMode
