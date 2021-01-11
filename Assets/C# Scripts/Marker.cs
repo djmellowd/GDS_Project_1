@@ -5,6 +5,7 @@ using UnityEngine;
 public class Marker : MonoBehaviour
 {
     public string currentStage;
+    public bool checksForBonus;
     HUDController hudController;
     Player player;
 
