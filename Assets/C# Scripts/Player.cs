@@ -93,29 +93,19 @@ public class Player : MonoBehaviour
         }
 
         //--------MOJA PROPOZYCJA PRZYSPIESZANIA/SPOWALNIANIA-----------------
-        if (Input.GetAxis("Horizontal") > 0 && currentSpeed <= maxSpeed && cam.orthographicSize <=12)
+        if (Input.GetAxis("Horizontal") > 0 && currentSpeed <= maxSpeed)
         {
             //testowo współczynnik przyspieszenia zahardcodowałem na 5, ale to kwestia do ustalenia
             currentSpeed += 5f * Time.deltaTime;
-            cam.orthographicSize += 1f * Time.deltaTime;
         }
-        else if (Input.GetAxis("Horizontal") < 0 && currentSpeed >= minSpeed && cam.orthographicSize >= 6)
+        else if (Input.GetAxis("Horizontal") < 0 && currentSpeed >= minSpeed)
         {
             currentSpeed -= 5f * Time.deltaTime;
-            cam.orthographicSize -= 1f * Time.deltaTime;
         }
 
         if (Input.GetAxis("Horizontal") == 0 && currentSpeed > initialSpeed)
         {
             currentSpeed -= 5f * Time.deltaTime;
-        }
-        if (Input.GetAxis("Horizontal") == 0 && cam.orthographicSize > 8)
-        {
-            cam.orthographicSize -= 1f * Time.deltaTime;
-        }
-        if (Input.GetAxis("Horizontal") == 0 && cam.orthographicSize < 8)
-        {
-            cam.orthographicSize += 1f * Time.deltaTime;
         }
         if (Input.GetAxis("Horizontal") == 0 && currentSpeed < initialSpeed)
         {
