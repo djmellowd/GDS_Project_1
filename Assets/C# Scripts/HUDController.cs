@@ -17,6 +17,8 @@ public class HUDController : MonoBehaviour
     public Image live3;
     public string stage;
 
+    public float timer = 0.0f;
+
     [SerializeField] Transform startGamePoint;
     Meta endGamePoint;
     Player player;
@@ -26,7 +28,7 @@ public class HUDController : MonoBehaviour
     float distanceDifference;
 
 
-    float timer = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {

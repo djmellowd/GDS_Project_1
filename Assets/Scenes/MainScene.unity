@@ -709,6 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: B
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &57991493
 PrefabInstance:
@@ -1835,6 +1836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: E
   checksForBonus: 1
+  averageTime: 80
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &147643491
 PrefabInstance:
@@ -2113,6 +2115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: K
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &172789648
 PrefabInstance:
@@ -3386,8 +3389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: -134.21}
-  m_SizeDelta: {x: 155.59186, y: 103.07092}
+  m_AnchoredPosition: {x: 472.6, y: -134.21}
+  m_SizeDelta: {x: 290.46024, y: 103.07092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271309380
 MonoBehaviour:
@@ -3443,7 +3446,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4087,7 +4090,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4537,6 +4540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: A
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1 &314946736
 GameObject:
@@ -4661,6 +4665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: D
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &323815275
 PrefabInstance:
@@ -10153,6 +10158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: O
   checksForBonus: 1
+  averageTime: 100
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &710893839
 PrefabInstance:
@@ -12376,6 +12382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: N
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &866017633
 PrefabInstance:
@@ -12650,6 +12657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: I
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &878574549
 PrefabInstance:
@@ -13529,6 +13537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: F
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &923653957
 PrefabInstance:
@@ -14333,6 +14342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: L
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1 &996873989
 GameObject:
@@ -14477,6 +14487,7 @@ MonoBehaviour:
   live2: {fileID: 1028313933}
   live3: {fileID: 1595250046}
   stage: 
+  timer: 0
   startGamePoint: {fileID: 58337016}
 --- !u!1001 &1025982279
 PrefabInstance:
@@ -19740,6 +19751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbd558db5f816f4c81c62f65edae748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTimeText: {fileID: 1658054540}
+  averageTimeText: {fileID: 2103640045}
+  recordTimeText: {fileID: 301299790}
+  bonusText: {fileID: 271309380}
 --- !u!1001 &1427697209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21779,6 +21794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: H
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &1612586291
 PrefabInstance:
@@ -22483,7 +22499,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -23509,6 +23525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: C
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &1752517540
 PrefabInstance:
@@ -24324,6 +24341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: G
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &1788332571
 PrefabInstance:
@@ -26359,6 +26377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: J
   checksForBonus: 1
+  averageTime: 80
   bonusScreen: {fileID: 1425460937}
 --- !u!1 &1962450530
 GameObject:
@@ -28109,6 +28128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: M
   checksForBonus: 0
+  averageTime: 0
   bonusScreen: {fileID: 1425460937}
 --- !u!1001 &2078560864
 PrefabInstance:
@@ -28582,7 +28602,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
