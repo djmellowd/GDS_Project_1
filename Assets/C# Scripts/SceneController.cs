@@ -18,12 +18,12 @@ public class SceneController : MonoBehaviour
     private GameObject _enemy10;
     private GameObject _enemy11;
 
+    GameObject player;
 
     void Start()
     {
         //zerowanie wyniku na starcie
         Player.score = 0;
-
         Invoke("NewEnemiesI2", 1);
         Invoke("NewEnemiesI2", 14);
         Invoke("NewEnemiesII2", 19);
@@ -45,9 +45,59 @@ public class SceneController : MonoBehaviour
 
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        while (player.activeInHierarchy)
+        {
+            GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Enemy1");
+            foreach (GameObject obj in allObjects)
+            {
+                Destroy(obj);
+            }
+            CancelInvoke("NewEnemiesI2");
+            CancelInvoke("NewEnemiesI2");
+            CancelInvoke("NewEnemiesII2");
+            CancelInvoke("NewEnemiesI2");
+            CancelInvoke("NewEnemiesII3");
+            CancelInvoke("NewEnemiesIII2");
+            CancelInvoke("NewEnemiesI2");
+            CancelInvoke("NewEnemiesIII2");
+            CancelInvoke("NewEnemiesII3");
+            CancelInvoke("NewEnemiesI3");
+            CancelInvoke("NewEnemiesIII2");
+            CancelInvoke("NewEnemiesI2");
+            CancelInvoke("NewEnemiesIII3");
+            CancelInvoke("NewEnemiesII3");
+            CancelInvoke("NewEnemiesI4");
+            CancelInvoke("NewEnemiesIII4");
+            CancelInvoke("NewEnemiesII3");
+            Invoke("NewEnemiesI2", 1);
+            Invoke("NewEnemiesI2", 14);
+            Invoke("NewEnemiesII2", 19);
+            Invoke("NewEnemiesI2", 25);
+            Invoke("NewEnemiesII3", 41);
+            Invoke("NewEnemiesIII2", 48);
+            Invoke("NewEnemiesI2", 53);
+            Invoke("NewEnemiesIII2", 62);
+            Invoke("NewEnemiesII3", 65);
+            Invoke("NewEnemiesI3", 68);
+            Invoke("NewEnemiesIII2", 95);
+            Invoke("NewEnemiesI2", 101);
+            Invoke("NewEnemiesIII3", 107);
+            Invoke("NewEnemiesII3", 168);
+            Invoke("NewEnemiesI4", 172);
+            Invoke("NewEnemiesIII4", 179);
+            Invoke("NewEnemiesII3", 183);
+        }
+        
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        if (screenPosition.y > Screen.height || screenPosition.y < 0)
-        Destroy(this.gameObject);
+        if (screenPosition.x > Screen.width || screenPosition.x < 0)
+        {
+            GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Enemy1");
+            foreach (GameObject obj in allObjects)
+            {
+                Destroy(obj);
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)

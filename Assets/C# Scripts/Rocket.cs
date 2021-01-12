@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Rocket : MonoBehaviour
 {
-    public float speed = 10.0f;
+    [SerializeField] public float angle = 10.0f;
+    [SerializeField] public float speed = 10.0f;
     public GameObject explosionFX;
     private Player player;
     private Rigidbody2D target;
@@ -23,7 +24,7 @@ public class Rocket : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, moveDirection, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, moveDirection, angle * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D col)

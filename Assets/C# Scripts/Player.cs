@@ -239,7 +239,6 @@ public class Player : MonoBehaviour
     {
         GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
         lives--;
-
         if (lives > 0)
         {
             currentSpeed = initialSpeed;
