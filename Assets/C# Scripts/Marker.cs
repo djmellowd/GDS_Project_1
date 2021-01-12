@@ -12,6 +12,7 @@ public class Marker : MonoBehaviour
     public GameObject bonusScreen;
     HUDController hudController;
     Player player;
+    int bonus;
 
     private void Start()
     {
@@ -36,6 +37,14 @@ public class Marker : MonoBehaviour
             else
             {
                 bonusScreen.GetComponent<BonusScreen>().recordTimeText.text = averageTime.ToString();
+            }
+
+            //przyznanie bonusa
+            if ((int)hudController.timer < averageTime)
+            {
+                bonus = 1000 + ((averageTime - (int)hudController.timer) * 10);
+                bonusScreen.GetComponent<BonusScreen>().bonusText.text = bonus.ToString();
+                Player.score += bonus;
             }
 
             Time.timeScale = 0f;
