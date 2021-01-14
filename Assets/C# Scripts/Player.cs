@@ -41,7 +41,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject missile2Prefab;
     private GameObject _missile;
     private GameObject _missile2;
-    private Camera cam;
+    private Camera _cam;
+    private SpriteRenderer _sprite;
 
     /*
     private bool hasPressedAccel;
@@ -60,7 +61,8 @@ public class Player : MonoBehaviour
 
         _body = GetComponent<Rigidbody2D>();
         _box = GetComponent<PolygonCollider2D>();
-        cam = FindObjectOfType<Camera>();
+        _cam = FindObjectOfType<Camera>();
+        _sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -225,6 +227,18 @@ public class Player : MonoBehaviour
     }
     */
 
+
+    //zderzenie z wrogiem
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 11)
+        {
+            Destroy(collision.gameObject);
+            LooseLife();
+        }
+    }
+
+
     void OnTriggerEnter2D(Collider2D col)
     {
         Bomb _bomb = col.GetComponent<Bomb>();
@@ -237,19 +251,7 @@ public class Player : MonoBehaviour
     //utrata życia
     public void LooseLife()
     {
-        GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
-        lives--;
-        if (lives > 0)
-        {
-            currentSpeed = initialSpeed;
-            //jeśli gracz wciąż ma jakieś życia to cofa go na pozycję ostatniego checkpointa
-            transform.position = checkpoint.position;
-        }
-        else if (lives <= 0)
-        {
-            //jesli gracz nie ma juz żyć, trafia do sceny game over
-            SceneManager.LoadScene("GameOverScene");
-        }
+        StartCoroutine(WaitBeforeDie());
     }
 
     //sprawdzenie, czy highscore nie został pobity
@@ -258,6 +260,26 @@ public class Player : MonoBehaviour
         if  (score > highscore)
         {
             highscore = score;
+        }
+    }
+
+    IEnumerator WaitBeforeDie()
+    {
+        GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
+        _sprite.enabled = false;
+        lives--;
+        yield return new WaitForSeconds(0.8f);
+        if (lives > 0)
+        {
+            currentSpeed = initialSpeed;
+            //jeśli gracz wciąż ma jakieś życia to cofa go na pozycję ostatniego checkpointa
+            transform.position = checkpoint.position;
+            _sprite.enabled = true;
+        }
+        else if (lives <= 0)
+        {
+            //jesli gracz nie ma juz żyć, trafia do sceny game over
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

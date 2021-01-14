@@ -5,6 +5,6 @@ public class Wheel : MonoBehaviour
 {
     void Update()
     {
-        transform.Rotate(0, 0, -10);
+        transform.Rotate(0, 0, -5);
     }
 }
