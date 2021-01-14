@@ -266,7 +266,15 @@ public class Player : MonoBehaviour
     IEnumerator WaitBeforeDie()
     {
         GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
+
+        //ukrycie pojazdu...
         _sprite.enabled = false;
+        //...i kół
+        foreach (Transform wheel in transform)
+        {
+            wheel.gameObject.SetActive(false);
+        }
+
         lives--;
         yield return new WaitForSeconds(0.8f);
         if (lives > 0)
@@ -274,7 +282,12 @@ public class Player : MonoBehaviour
             currentSpeed = initialSpeed;
             //jeśli gracz wciąż ma jakieś życia to cofa go na pozycję ostatniego checkpointa
             transform.position = checkpoint.position;
+            //ponowne ukazanie pojazdu i kół
             _sprite.enabled = true;
+            foreach (Transform wheel in transform)
+            {
+                wheel.gameObject.SetActive(true);
+            }
         }
         else if (lives <= 0)
         {
