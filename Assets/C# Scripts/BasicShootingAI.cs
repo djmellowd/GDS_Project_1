@@ -5,6 +5,12 @@ public class BasicShootingAI : MonoBehaviour
 {
     [SerializeField] private GameObject rocketPrefab;
     private GameObject _rocket;
+    private AudioSource _sfx;
+
+    private void Start()
+    {
+        _sfx = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -15,6 +21,7 @@ public class BasicShootingAI : MonoBehaviour
             if (_rocket == null)
             {
                 _rocket = Instantiate(rocketPrefab) as GameObject;
+                _sfx.Play();
                 _rocket.transform.position = transform.TransformPoint(-Vector2.up * 1.0f);
                 _rocket.transform.rotation = transform.rotation;
             }

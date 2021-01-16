@@ -97,6 +97,9 @@ public class Player : MonoBehaviour
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
+            _sfx.clip = jumpSFX;
+            _sfx.Play();
+
             //kółka do góry
             wheel1Anim.SetBool("isJumping", true);
             wheel2Anim.SetBool("isJumping", true);
@@ -156,6 +159,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire"))
         {
+            _sfx.clip = fireSFX;
             _sfx.Play();
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f + transform.right * -1.0f, transform.rotation) as GameObject;
             _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 3.0f, transform.rotation) as GameObject;
@@ -273,6 +277,8 @@ public class Player : MonoBehaviour
 
     IEnumerator WaitBeforeDie()
     {
+        _sfx.clip = explosionSFX;
+        _sfx.Play();
         GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
 
         //ukrycie pojazdu...
