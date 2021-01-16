@@ -149,7 +149,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire"))
         {
-            _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f, transform.rotation) as GameObject;
+            _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f + transform.right * -1.0f, transform.rotation) as GameObject;
             _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 3.0f, transform.rotation) as GameObject;
 
             //w oryginale rakieta z przodu ma ograniczony zasięg, żeby nie mogła doleciec za daleko

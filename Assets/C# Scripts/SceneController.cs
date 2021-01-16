@@ -44,15 +44,6 @@ public class SceneController : MonoBehaviour
 
     void Update()
     {
-        if (!GameObject.FindWithTag("Player").activeInHierarchy)
-        {
-            GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Enemy1");
-            foreach (GameObject obj in allObjects)
-            {
-                Destroy(obj);
-            }
-        }
-        
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         if (screenPosition.x > Screen.width || screenPosition.x < 0)
         {
