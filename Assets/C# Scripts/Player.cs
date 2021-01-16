@@ -34,8 +34,13 @@ public class Player : MonoBehaviour
     public Animator wheel2Anim;
     public Animator wheel3Anim;
 
+    //klipy audio
+    public AudioClip fireSFX;
+    public AudioClip jumpSFX;
+    public AudioClip explosionSFX;
+
     private Rigidbody2D _body;
-    public PolygonCollider2D _box;
+    private PolygonCollider2D _box;
 
     [SerializeField] private GameObject missilePrefab;
     [SerializeField] private GameObject missile2Prefab;
@@ -43,6 +48,9 @@ public class Player : MonoBehaviour
     private GameObject _missile2;
     private Camera _cam;
     private SpriteRenderer _sprite;
+    private AudioSource _sfx;
+
+
 
     /*
     private bool hasPressedAccel;
@@ -63,6 +71,7 @@ public class Player : MonoBehaviour
         _box = GetComponent<PolygonCollider2D>();
         _cam = FindObjectOfType<Camera>();
         _sprite = GetComponent<SpriteRenderer>();
+        _sfx = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -94,7 +103,6 @@ public class Player : MonoBehaviour
             wheel3Anim.SetBool("isJumping", true);
         }
 
-        //--------MOJA PROPOZYCJA PRZYSPIESZANIA/SPOWALNIANIA-----------------
         if (Input.GetAxis("Horizontal") > 0 && currentSpeed <= maxSpeed)
         {
             //testowo współczynnik przyspieszenia zahardcodowałem na 5, ale to kwestia do ustalenia
@@ -113,7 +121,6 @@ public class Player : MonoBehaviour
         {
             currentSpeed += 5f * Time.deltaTime;
         }
-        //--------------------------------------------------------------------
 
         /*
         if (Input.GetKeyDown(KeyCode.D))
@@ -149,6 +156,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire"))
         {
+            _sfx.Play();
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f + transform.right * -1.0f, transform.rotation) as GameObject;
             _missile2 = Instantiate(missile2Prefab, transform.position + transform.right * 3.0f, transform.rotation) as GameObject;
 
@@ -269,6 +277,7 @@ public class Player : MonoBehaviour
 
         //ukrycie pojazdu...
         _sprite.enabled = false;
+        _box.enabled = false;
         //...i kół
         foreach (Transform wheel in transform)
         {
@@ -284,6 +293,7 @@ public class Player : MonoBehaviour
             transform.position = checkpoint.position;
             //ponowne ukazanie pojazdu i kół
             _sprite.enabled = true;
+            _box.enabled = true;
             foreach (Transform wheel in transform)
             {
                 wheel.gameObject.SetActive(true);
