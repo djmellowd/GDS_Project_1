@@ -28,8 +28,6 @@ public class BasicFlyingAI : MonoBehaviour
 
         var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
         transform.position = _centre + offset;
-
-        Invoke("Following", 12);
     }
 
     void OnCollisionEnter2D(Collision2D col)
