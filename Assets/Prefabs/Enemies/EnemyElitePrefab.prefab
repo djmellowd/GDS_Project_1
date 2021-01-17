@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4612186122960822449}
   - component: {fileID: 6285469221575707520}
   - component: {fileID: 8000902443612632812}
+  - component: {fileID: 1152335840599729022}
+  - component: {fileID: 2457056987359005643}
   m_Layer: 0
   m_Name: EnemyElitePrefab
   m_TagString: Untagged
@@ -156,7 +158,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!82 &8000902443612632812
 AudioSource:
   m_ObjectHideFlags: 0
@@ -253,3 +255,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1152335840599729022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665474971033430828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a5ca700925cc64f93f7df2cc2d1054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+--- !u!114 &2457056987359005643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665474971033430828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0792c8aad8f97cd4fa7382c73ce07a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketPrefab: {fileID: 6383543895204848599, guid: c2e142fef4ff8d043af4cd16b796c224,
+    type: 3}

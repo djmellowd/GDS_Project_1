@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -6682489401660871259}
   - component: {fileID: 8202065140809567491}
   - component: {fileID: -930371456097010186}
-  - component: {fileID: 6014520551972215482}
   - component: {fileID: 1718166268307032052}
   m_Layer: 11
   m_Name: Enemy01Prefab
@@ -185,20 +184,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6014520551972215482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6752680659954487754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 662c30b42d6e38041a020d9d420ba370, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnOffset: {x: 0, y: 0}
-  moves: []
 --- !u!82 &1718166268307032052
 AudioSource:
   m_ObjectHideFlags: 0
