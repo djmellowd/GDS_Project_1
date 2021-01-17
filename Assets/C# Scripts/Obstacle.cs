@@ -9,10 +9,12 @@ public class Obstacle : MonoBehaviour
     AudioSource _sfx;
     Player _player;
 
+
     private void Start()
     {
         _player = FindObjectOfType<Player>();
-        _sfx = FindObjectOfType<AudioSource>();
+        _sfx = GetComponent<AudioSource>();
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,6 +29,7 @@ public class Obstacle : MonoBehaviour
             _sfx.Play();
             GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
+            
             Destroy(gameObject);
         }
     }
