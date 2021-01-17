@@ -7,6 +7,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private GameObject Enemy01Prefab;
     [SerializeField] private GameObject Enemy02Prefab;
     [SerializeField] private GameObject Enemy03Prefab;
+    [SerializeField] private GameObject EnemyElitePrefab;
     private GameObject _enemy;
     private GameObject _enemy2;
     private GameObject _enemy3;
@@ -29,12 +30,12 @@ public class EnemySpawn : MonoBehaviour
 
     void NewEnemiesI2()
     {
-        _enemy = Instantiate(Enemy01Prefab) as GameObject;
+        _enemy = Instantiate(EnemyElitePrefab) as GameObject;
         _enemy.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 1000, Screen.height - 200, 0));
         float angle = 0;
         _enemy.transform.Rotate(0, angle, 0);
 
-        _enemy2 = Instantiate(Enemy01Prefab) as GameObject;
+        _enemy2 = Instantiate(EnemyElitePrefab) as GameObject;
         _enemy2.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 500, Screen.height - 200, 0));
         _enemy2.transform.Rotate(0, angle, 0);
     }

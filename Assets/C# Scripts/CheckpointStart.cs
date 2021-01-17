@@ -25,6 +25,12 @@ public class CheckpointStart : MonoBehaviour
             {
                 Destroy(obj);
             }
+
+            GameObject[] allObjects4 = GameObject.FindGameObjectsWithTag("Enemy4");
+            foreach (GameObject obj in allObjects4)
+            {
+                Destroy(obj);
+            }
         }
     }
 }

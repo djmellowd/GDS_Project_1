@@ -8,6 +8,7 @@ TagManager:
   - Enemy2
   - Enemy3
   - checkpoint
+  - Enemy4
   layers:
   - Default
   - TransparentFX

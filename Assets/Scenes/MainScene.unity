@@ -26255,6 +26255,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!1 &1270837922
 GameObject:
   m_ObjectHideFlags: 0
