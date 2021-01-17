@@ -3,7 +3,8 @@ using System.Collections;
 
 public class BasicFlyingAI : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float chaseSpeed = 10.0f;
+    [SerializeField] private float runAwaySpeed = 8.0f;
     Player _player;
     private Transform target;
 
@@ -12,6 +13,9 @@ public class BasicFlyingAI : MonoBehaviour
 
     private Vector2 _centre;
     private float _angle;
+
+    [SerializeField] private float waitTime = 8.5f;
+    private float timer = 0.0f;
 
     void Start()
     {
@@ -22,22 +26,36 @@ public class BasicFlyingAI : MonoBehaviour
 
     void Update()
     {
-        speed = _player.currentSpeed;
+        int actions = Random.Range(0, 2);
+        timer += Time.deltaTime;
+        if (timer > waitTime)
+        {
+            switch (actions)
+            {
+                case 0:
+                    transform.position = Vector2.MoveTowards(transform.position, target.position, chaseSpeed * Time.deltaTime);
+                    break;
+                case 1:
+                    transform.Translate(Vector2.left * runAwaySpeed * Time.deltaTime);
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            _centre += new Vector2(_player.currentSpeed, 0) * Time.deltaTime;
 
-        _angle += rotateSpeed * Time.deltaTime;
+            _angle += rotateSpeed * Time.deltaTime;
 
-        var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
-        transform.position = _centre + offset;
+            var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
+            transform.position = _centre + offset;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         float angle = 180;
         transform.Rotate(0, angle, 0);
-    }
-    
-    void Following()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 }

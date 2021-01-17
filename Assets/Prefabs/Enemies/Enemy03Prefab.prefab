@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  waitTime: 8.5
 --- !u!114 &8175447352314106423
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class SceneController : MonoBehaviour
     void Update()
     {
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        if (screenPosition.x > Screen.width || screenPosition.x < 0)
+        if (screenPosition.x > Screen.width)
         {
             GameObject[] allObjects1 = GameObject.FindGameObjectsWithTag("Enemy1");
             foreach (GameObject obj in allObjects1)
