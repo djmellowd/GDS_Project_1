@@ -38,10 +38,11 @@ public class BonusScreen : MonoBehaviour
             hudController.timer = 0f;
             gameObject.SetActive(false);
 
-            polygonMountains.transform.position = new Vector3(1, -2, 0);
-            frontMountains.transform.position = new Vector3(18, -2.7f, 0);
+            frontMountains.GetComponent<Parallax>().resetAtCheckpoint = true;
+            polygonMountains.GetComponent<Parallax>().resetAtCheckpoint = true;
 
-            if(_isCityLevel)
+
+            if (_isCityLevel)
             {
                 frontMountains.GetComponent<SpriteRenderer>().sprite = city;
             } 

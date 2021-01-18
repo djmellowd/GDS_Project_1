@@ -14500,7 +14500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &700359347
 Transform:
   m_ObjectHideFlags: 0
@@ -43355,7 +43355,7 @@ PrefabInstance:
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: lives
-      value: 3
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
@@ -43385,12 +43385,12 @@ PrefabInstance:
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: maxSpeed
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: jumpForce
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}

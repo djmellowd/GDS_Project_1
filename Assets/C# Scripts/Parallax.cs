@@ -11,6 +11,8 @@ public class Parallax : MonoBehaviour
     public GameObject cam;
     public float parallaxEffect;
 
+    public bool resetAtCheckpoint = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,11 @@ public class Parallax : MonoBehaviour
 
         //poruszamy elementem tła
         transform.position = new Vector3(_startPosition + dist, transform.position.y, transform.position.z);
+
+        if (resetAtCheckpoint)
+        {
+            _startPosition = _length*2;
+            resetAtCheckpoint = false;
+        }
     }
 }
