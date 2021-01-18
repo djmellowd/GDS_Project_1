@@ -12789,7 +12789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630576392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.587587, y: -2, z: 0}
+  m_LocalPosition: {x: 1, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491893646}
@@ -12858,7 +12858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.999
+  parallaxEffect: 0.99
 --- !u!1001 &633181422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13561,7 +13561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667197809}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.124823, y: -2.79, z: 0}
+  m_LocalPosition: {x: 18, y: -2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491893646}
@@ -13630,7 +13630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.995
+  parallaxEffect: 0.92
 --- !u!1001 &670758486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28842,7 +28842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381179185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.900087, y: 3.0447695, z: 0}
+  m_LocalPosition: {x: 0.28, y: 3.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1197146254}
@@ -29864,6 +29864,10 @@ MonoBehaviour:
   averageTimeText: {fileID: 2103640045}
   recordTimeText: {fileID: 301299790}
   bonusText: {fileID: 271309380}
+  polygonMountains: {fileID: 630576392}
+  frontMountains: {fileID: 667197809}
+  mountains: {fileID: 21300000, guid: d5805cdb2c3d0444b8c4b37e2eb7383f, type: 3}
+  city: {fileID: 21300000, guid: 262ac86ddbc7ffb46acdc0098ddab6a9, type: 3}
 --- !u!1001 &1427697209
 PrefabInstance:
   m_ObjectHideFlags: 0
