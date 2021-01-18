@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     
     public float jumpForce = 0.0001f;
 
+    public GameObject pauseMenu;
+
     //efekt wybuchu
     public GameObject explosionFX;
 
@@ -92,7 +94,7 @@ public class Player : MonoBehaviour
             wheel3Anim.SetBool("isJumping", false);
         }
 
-        if (grounded && Input.GetButtonDown("Jump") && transform.position.y <= -1)
+        if (grounded && Input.GetButtonDown("Jump") && transform.position.y <= -1 && pauseMenu.activeSelf == false)
         {
             _body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
@@ -156,7 +158,7 @@ public class Player : MonoBehaviour
         */
         transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Fire"))
+        if (Input.GetButtonDown("Fire") && pauseMenu.activeSelf == false)
         {
             _sfx.clip = fireSFX;
             _sfx.Play();
