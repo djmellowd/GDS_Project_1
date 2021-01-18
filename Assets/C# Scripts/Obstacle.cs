@@ -6,14 +6,12 @@ public class Obstacle : MonoBehaviour
 {
     public GameObject explosionFX;
 
-    AudioSource _sfx;
     Player _player;
 
 
     private void Start()
     {
         _player = FindObjectOfType<Player>();
-        _sfx = GetComponent<AudioSource>();
 
     }
 
@@ -26,7 +24,6 @@ public class Obstacle : MonoBehaviour
         else if (collision.gameObject.layer == 9)
         {
             Player.score += 100;
-            _sfx.Play();
             GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
             

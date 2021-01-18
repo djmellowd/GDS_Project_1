@@ -7,12 +7,10 @@ public class Missile2 : MonoBehaviour
     public GameObject alienExplosionFX;
 
     Player _player;
-    AudioSource _sfx;
 
     void Start()
     {
         _player = FindObjectOfType<Player>();
-        _sfx = GetComponent<AudioSource>();
     }
 
 
@@ -37,7 +35,6 @@ public class Missile2 : MonoBehaviour
         {
             //+100 pkt za podstawowego wroga
             Player.score += 100;
-            _sfx.Play();
             GameObject boom = Instantiate(alienExplosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;

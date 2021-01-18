@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
     //klipy audio
     public AudioClip fireSFX;
     public AudioClip jumpSFX;
-    public AudioClip explosionSFX;
 
     private Rigidbody2D _body;
     private PolygonCollider2D _box;
@@ -277,8 +276,6 @@ public class Player : MonoBehaviour
 
     IEnumerator WaitBeforeDie()
     {
-        _sfx.clip = explosionSFX;
-        _sfx.Play();
         GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
 
         //ukrycie pojazdu...
