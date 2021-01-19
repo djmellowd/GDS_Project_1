@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8000902443612632812}
   - component: {fileID: 2457056987359005643}
   - component: {fileID: -7228207146237306419}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyElitePrefab
   m_TagString: Enemy4
   m_Icon: {fileID: 0}
@@ -282,8 +282,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runAwaySpeed: 8
-  waitTime: 4
-  begin: 0
-  dist: 5
-  speed: 5
-  dir: 0
+  forwardSpeed: 3
+  backwardsSpeed: -3
+  runAwayWaitTime: 4
+  changeDirectionWaitTime: 1
+  changeDirectionWaitTime2: 2
+  changeDirectionWaitTime3: 3
