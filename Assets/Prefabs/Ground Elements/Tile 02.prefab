@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7201363194713126084}
   - component: {fileID: 4319492474049474116}
   - component: {fileID: 121178456423282577}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 237576043
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 504074a7f2ea98a439c82f0c92282285, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

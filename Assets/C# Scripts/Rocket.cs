@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Security.Cryptography;
 
 public class Rocket : MonoBehaviour
 {
@@ -27,11 +28,12 @@ public class Rocket : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, moveDirection, angle * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.layer == 10)
         {
             player.LooseLife();
+            Destroy(gameObject);
         }
         else if (col.gameObject.layer == 12)
         {
@@ -39,7 +41,7 @@ public class Rocket : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
-        else if (col.gameObject.layer == 13)
+        if (col.gameObject.layer == 13)
         {
             GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
             Destroy(gameObject);
