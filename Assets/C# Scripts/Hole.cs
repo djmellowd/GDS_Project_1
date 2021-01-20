@@ -18,6 +18,11 @@ public class Hole : MonoBehaviour
         {
             player.LooseLife();
         }
+
+        if (collision.gameObject.layer == 12)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
 }

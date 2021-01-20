@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6812453871983163767}
   - component: {fileID: 137381567889137459}
   - component: {fileID: 1263712458666585360}
+  - component: {fileID: 8767350148833624651}
   m_Layer: 13
   m_Name: Tile 03
   m_TagString: Untagged
@@ -109,6 +110,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 5.98582}
   m_EdgeRadius: 0
+--- !u!114 &8767350148833624651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407789305627406882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a4ee6f5775b6e47bd06c5cf2c8eee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hole: {fileID: 6948876329151793322}
 --- !u!1001 &353517093602457531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,6 +130,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6812453871983163767}
     m_Modifications:
+    - target: {fileID: 1376515289324945860, guid: fbe47fc557dfedf45a26937a8c2d0540,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649230090323688133, guid: fbe47fc557dfedf45a26937a8c2d0540,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714368303385952354, guid: fbe47fc557dfedf45a26937a8c2d0540,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798190245916756713, guid: fbe47fc557dfedf45a26937a8c2d0540,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7244233343158812433, guid: fbe47fc557dfedf45a26937a8c2d0540,
         type: 3}
       propertyPath: m_Name
@@ -124,7 +158,7 @@ PrefabInstance:
     - target: {fileID: 7244233343158812433, guid: fbe47fc557dfedf45a26937a8c2d0540,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9210648849160629678, guid: fbe47fc557dfedf45a26937a8c2d0540,
         type: 3}
@@ -183,6 +217,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe47fc557dfedf45a26937a8c2d0540, type: 3}
+--- !u!1 &6948876329151793322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7244233343158812433, guid: fbe47fc557dfedf45a26937a8c2d0540,
+    type: 3}
+  m_PrefabInstance: {fileID: 353517093602457531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8878070102913161749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9210648849160629678, guid: fbe47fc557dfedf45a26937a8c2d0540,
