@@ -11,10 +11,17 @@ public class HUDController : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI stageText;
+    public TextMeshProUGUI cautionText;
+
     public Image progressBar;
     public Image live1;
     public Image live2;
     public Image live3;
+
+    public Image cautionEnemy;
+    public Image cautionRocks;
+    public Image cautionMines;
+
     public string stage;
 
     public float timer = 0.0f;

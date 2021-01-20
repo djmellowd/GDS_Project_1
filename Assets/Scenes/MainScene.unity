@@ -10805,7 +10805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &492600464
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18421,7 +18421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &851198598
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22017,15 +22017,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ae8029da79d7840aa21621644add88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 367398095}
+  scoreText: {fileID: 203561969}
   highscoreText: {fileID: 1395340268}
   timeText: {fileID: 302758938}
   livesText: {fileID: 1870368202}
   stageText: {fileID: 732753842}
+  cautionText: {fileID: 0}
   progressBar: {fileID: 911361641}
   live1: {fileID: 450020358}
   live2: {fileID: 1028313933}
   live3: {fileID: 1595250046}
+  cautionEnemy: {fileID: 851198599}
+  cautionRocks: {fileID: 492600465}
+  cautionMines: {fileID: 1626559091}
   stage: 
   timer: 0
   startGamePoint: {fileID: 58337016}
@@ -35070,7 +35074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1626559090
 RectTransform:
   m_ObjectHideFlags: 0
