@@ -12161,6 +12161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a4ee6f5775b6e47bd06c5cf2c8eee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hole: {fileID: 0}
 --- !u!1 &567259765
 GameObject:
   m_ObjectHideFlags: 0
@@ -22075,7 +22076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ae8029da79d7840aa21621644add88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 203561969}
+  scoreText: {fileID: 367398095}
   highscoreText: {fileID: 1395340268}
   timeText: {fileID: 302758938}
   livesText: {fileID: 1870368202}
