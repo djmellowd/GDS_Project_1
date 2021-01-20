@@ -11,9 +11,12 @@ public class EliteShooting : MonoBehaviour
     [SerializeField] private float flyingOutTime = 2.0f;
     private float timer = 0.0f;
 
+    bool _notShotYet;
+
     private void Start()
     {
         _sfx = GetComponent<AudioSource>();
+        _notShotYet = true;
     }
 
     void Update()
@@ -25,12 +28,13 @@ public class EliteShooting : MonoBehaviour
             GameObject hitObject = hit.transform.gameObject;
             if (hitObject.GetComponent<Player>())
             {
-                if (_rocket2 == null)
+                if (_rocket2 == null && _notShotYet)
                 {
                     _rocket2 = Instantiate(rocketPrefabElite) as GameObject;
                     _sfx.Play();
                     _rocket2.transform.position = transform.TransformPoint(-Vector2.up * 1.0f);
                     _rocket2.transform.rotation = transform.rotation;
+                    _notShotYet = false;
                 }
             }
         }
