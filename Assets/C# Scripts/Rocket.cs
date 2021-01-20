@@ -7,6 +7,8 @@ public class Rocket : MonoBehaviour
     [SerializeField] public float angle = 10.0f;
     [SerializeField] public float speed = 10.0f;
     public GameObject explosionFX;
+    public bool isElite;
+
     private Player player;
     private Rigidbody2D target;
     private Vector2 moveDirection;
@@ -44,6 +46,14 @@ public class Rocket : MonoBehaviour
         if (col.gameObject.layer == 13)
         {
             GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
+            if (isElite)
+            {
+                col.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                col.gameObject.GetComponent<Collider2D>().enabled = false;
+                col.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                col.gameObject.GetComponentInChildren<Collider2D>().enabled = true;
+                col.gameObject.GetComponentInChildren<Hole>().enabled = true;
+            }
             Destroy(gameObject);
         }
     }
