@@ -22,9 +22,9 @@ public class Player : MonoBehaviour
     [SerializeField] public float speed5 = 15;
     [SerializeField] public float speed1 = 3;
     */
+    public bool isAlive = true;
     public float currentSpeed;
-    
-    public float jumpForce = 0.0001f;
+    public float jumpForce;
 
     public GameObject pauseMenu;
 
@@ -289,6 +289,7 @@ public class Player : MonoBehaviour
             wheel.gameObject.SetActive(false);
         }
 
+        isAlive = false;
         lives--;
         yield return new WaitForSeconds(0.8f);
         if (lives > 0)
@@ -303,6 +304,7 @@ public class Player : MonoBehaviour
             {
                 wheel.gameObject.SetActive(true);
             }
+            isAlive = true;
         }
         else if (lives <= 0)
         {
