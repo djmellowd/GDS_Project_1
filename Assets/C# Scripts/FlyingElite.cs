@@ -11,11 +11,14 @@ public class FlyingElite : MonoBehaviour
     [SerializeField] private float forwardSpeed = 5.0f;
     [SerializeField] private float backwardsSpeed = -5.0f;
 
-    [SerializeField] private float runAwayWaitTime = 8.0f;
-    [SerializeField] private float changeDirectionWaitTime = 1.0f;
-    [SerializeField] private float changeDirectionWaitTime2 = 4.0f;
-    [SerializeField] private float changeDirectionWaitTime3 = 6.0f;
+    [SerializeField] private float runAwayWaitTime = 9.0f;
+    [SerializeField] private float changeDirectionWaitTime = 3.0f;
+    [SerializeField] private float changeDirectionWaitTime2 = 5.0f;
+    [SerializeField] private float changeDirectionWaitTime3 = 7.0f;
     private float timer = 0.0f;
+
+    [SerializeField] private float flyingOutTime = 2.0f;
+    [SerializeField] private float flyingOutDistance = -2.0f;
 
     void Start()
     {
@@ -29,6 +32,11 @@ public class FlyingElite : MonoBehaviour
         if (timer > runAwayWaitTime)
         {
             transform.Translate(Vector2.left * runAwaySpeed * Time.deltaTime);
+        }
+        else if (timer < flyingOutTime)
+        {
+            direction += new Vector2(_player.currentSpeed, flyingOutDistance) * Time.deltaTime;
+            transform.position = direction;
         }
         else
         {

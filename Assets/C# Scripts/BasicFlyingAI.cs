@@ -14,7 +14,9 @@ public class BasicFlyingAI : MonoBehaviour
     private Vector2 _centre;
     private float _angle;
 
-    [SerializeField] private float waitTime = 8.5f;
+    [SerializeField] private float waitTime = 10.5f;
+    [SerializeField] private float flyingOutTime = 2.0f;
+    [SerializeField] private float flyingOutDistance = -3.0f;
     private float timer = 0.0f;
 
     void Start()
@@ -41,6 +43,15 @@ public class BasicFlyingAI : MonoBehaviour
                 default:
                     break;
             }
+        }
+        else if (timer < flyingOutTime)
+        {
+            _centre += new Vector2(_player.currentSpeed, flyingOutDistance) * Time.deltaTime;
+
+            _angle += rotateSpeed * Time.deltaTime;
+
+            var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
+            transform.position = _centre + offset;
         }
         else
         {

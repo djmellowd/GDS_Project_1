@@ -100,7 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseSpeed: 10
   runAwaySpeed: 8
-  waitTime: 9
+  waitTime: 10.5
+  flyingOutTime: 2
+  flyingOutDistance: -3
 --- !u!114 &-6682489401660871259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 6383543895204848599, guid: c2e142fef4ff8d043af4cd16b796c224,
     type: 3}
+  flyingOutTime: 1
 --- !u!60 &8202065140809567491
 PolygonCollider2D:
   m_ObjectHideFlags: 0

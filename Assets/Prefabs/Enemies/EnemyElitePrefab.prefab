@@ -270,10 +270,12 @@ MonoBehaviour:
   runAwaySpeed: 8
   forwardSpeed: 5
   backwardsSpeed: -5
-  runAwayWaitTime: 8
-  changeDirectionWaitTime: 1
-  changeDirectionWaitTime2: 4
-  changeDirectionWaitTime3: 6
+  runAwayWaitTime: 9
+  changeDirectionWaitTime: 3
+  changeDirectionWaitTime2: 5
+  changeDirectionWaitTime3: 7
+  flyingOutTime: 2
+  flyingOutDistance: -2
 --- !u!114 &-8480797265888571325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,3 +290,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketPrefabElite: {fileID: 6383543895204848599, guid: 26ec556133ce0fd47a324e1a4341a0e5,
     type: 3}
+  flyingOutTime: 2
