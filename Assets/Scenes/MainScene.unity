@@ -4386,6 +4386,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &236409239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8659,6 +8661,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &405841112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10634,6 +10638,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &491210435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12029,6 +12035,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &558225180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12216,6 +12224,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &576987465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12265,6 +12275,8 @@ MonoBehaviour:
   Enemy02Prefab: {fileID: 7518555189718698640, guid: 22ed11eb4f77b2e48a3a823b52ce2759,
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
+    type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
     type: 3}
 --- !u!61 &577453150
 BoxCollider2D:
@@ -13488,6 +13500,8 @@ MonoBehaviour:
   Enemy02Prefab: {fileID: 7518555189718698640, guid: 22ed11eb4f77b2e48a3a823b52ce2759,
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
+    type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
     type: 3}
 --- !u!61 &618805452
 BoxCollider2D:
@@ -14907,6 +14921,8 @@ MonoBehaviour:
   Enemy02Prefab: {fileID: 7518555189718698640, guid: 22ed11eb4f77b2e48a3a823b52ce2759,
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
+    type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
     type: 3}
 --- !u!61 &687147885
 BoxCollider2D:
@@ -16465,6 +16481,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &742989934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17968,6 +17986,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &829551929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18591,6 +18611,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 11.277147}
   m_EdgeRadius: 0
+--- !u!114 &852700820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852700818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b5673c1fa7b3f4a916b3b537455a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy01Prefab: {fileID: 6752680659954487754, guid: da04d0111d56ca64cad1317d0218967d,
+    type: 3}
+  Enemy02Prefab: {fileID: 7518555189718698640, guid: 22ed11eb4f77b2e48a3a823b52ce2759,
+    type: 3}
+  Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
+    type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!1001 &858736527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22137,6 +22177,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &1011201155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22186,6 +22228,8 @@ MonoBehaviour:
   Enemy02Prefab: {fileID: 7518555189718698640, guid: 22ed11eb4f77b2e48a3a823b52ce2759,
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
+    type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
     type: 3}
 --- !u!61 &1014067352
 BoxCollider2D:
@@ -27492,6 +27536,8 @@ MonoBehaviour:
   Enemy02Prefab: {fileID: 7518555189718698640, guid: 22ed11eb4f77b2e48a3a823b52ce2759,
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
+    type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
     type: 3}
 --- !u!61 &1249855342
 BoxCollider2D:
@@ -33313,6 +33359,8 @@ MonoBehaviour:
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
     type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
+    type: 3}
 --- !u!61 &1538478349
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36981,6 +37029,8 @@ MonoBehaviour:
   Enemy02Prefab: {fileID: 7518555189718698640, guid: 22ed11eb4f77b2e48a3a823b52ce2759,
     type: 3}
   Enemy03Prefab: {fileID: 1693893032656423692, guid: 587622485f2cba84bb6de1f4a9c45fe7,
+    type: 3}
+  EnemyElitePrefab: {fileID: 5665474971033430828, guid: b18cfbe89d0ecb7499a5d60a21ee3e03,
     type: 3}
 --- !u!61 &1729126537
 BoxCollider2D:

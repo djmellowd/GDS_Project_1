@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4612186122960822449}
   - component: {fileID: 6285469221575707520}
   - component: {fileID: 8000902443612632812}
-  - component: {fileID: 2457056987359005643}
   - component: {fileID: -7228207146237306419}
+  - component: {fileID: -8480797265888571325}
   m_Layer: 11
   m_Name: EnemyElitePrefab
   m_TagString: Enemy4
@@ -99,7 +99,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -156,8 +156,8 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!82 &8000902443612632812
 AudioSource:
@@ -255,20 +255,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2457056987359005643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5665474971033430828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0792c8aad8f97cd4fa7382c73ce07a3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rocketPrefab: {fileID: 6383543895204848599, guid: 26ec556133ce0fd47a324e1a4341a0e5,
-    type: 3}
 --- !u!114 &-7228207146237306419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,9 +268,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runAwaySpeed: 8
-  forwardSpeed: 3
-  backwardsSpeed: -3
-  runAwayWaitTime: 4
+  forwardSpeed: 5
+  backwardsSpeed: -5
+  runAwayWaitTime: 8
   changeDirectionWaitTime: 1
-  changeDirectionWaitTime2: 2
-  changeDirectionWaitTime3: 3
+  changeDirectionWaitTime2: 4
+  changeDirectionWaitTime3: 6
+--- !u!114 &-8480797265888571325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665474971033430828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d27f0e848ab6c408a3cf5545c76907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketPrefabElite: {fileID: 6383543895204848599, guid: 26ec556133ce0fd47a324e1a4341a0e5,
+    type: 3}

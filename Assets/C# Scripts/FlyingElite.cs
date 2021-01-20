@@ -8,13 +8,13 @@ public class FlyingElite : MonoBehaviour
 
     private float _angle;
     private Vector2 direction;
-    [SerializeField] private float forwardSpeed = 3.0f;
-    [SerializeField] private float backwardsSpeed = -3.0f;
+    [SerializeField] private float forwardSpeed = 5.0f;
+    [SerializeField] private float backwardsSpeed = -5.0f;
 
-    [SerializeField] private float runAwayWaitTime = 4.0f;
+    [SerializeField] private float runAwayWaitTime = 8.0f;
     [SerializeField] private float changeDirectionWaitTime = 1.0f;
-    [SerializeField] private float changeDirectionWaitTime2 = 2.0f;
-    [SerializeField] private float changeDirectionWaitTime3 = 3.0f;
+    [SerializeField] private float changeDirectionWaitTime2 = 4.0f;
+    [SerializeField] private float changeDirectionWaitTime3 = 6.0f;
     private float timer = 0.0f;
 
     void Start()
