@@ -46,17 +46,6 @@ public class Rocket : MonoBehaviour
         if (col.gameObject.layer == 13)
         {
             GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
-            /*
-            if (isElite)
-            {
-                col.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                col.gameObject.GetComponent<Collider2D>().enabled = false;
-
-                col.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
-                col.gameObject.GetComponentInChildren<Collider2D>().enabled = true;
-                col.gameObject.GetComponentInChildren<Hole>().enabled = true;
-            }
-            */
             Destroy(gameObject);
         }
     }
