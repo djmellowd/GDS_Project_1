@@ -28,13 +28,14 @@ public class EliteShooting : MonoBehaviour
             GameObject hitObject = hit.transform.gameObject;
             if (hitObject.GetComponent<Player>())
             {
-                if (_rocket2 == null && _notShotYet)
+                if (_rocket2 == null && _notShotYet && !SceneController.isEliteMissileOnScene)
                 {
                     _rocket2 = Instantiate(rocketPrefabElite) as GameObject;
                     _sfx.Play();
                     _rocket2.transform.position = transform.TransformPoint(-Vector2.up * 1.0f);
                     _rocket2.transform.rotation = transform.rotation;
                     _notShotYet = false;
+                    SceneController.isEliteMissileOnScene = true;
                 }
             }
         }

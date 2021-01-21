@@ -60,4 +60,12 @@ public class Rocket : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        if(isElite)
+        {
+            SceneController.isEliteMissileOnScene = false;
+        }
+    }
 }
