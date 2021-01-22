@@ -7179,7 +7179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press any key to continue
+  m_text: Press ENTER to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 903ad29ce0c84c4498141d1235199803, type: 2}
   m_sharedMaterial: {fileID: -3799426431448409511, guid: 903ad29ce0c84c4498141d1235199803,
