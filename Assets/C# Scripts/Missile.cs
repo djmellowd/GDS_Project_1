@@ -6,9 +6,18 @@ public class Missile : MonoBehaviour
     public float speed = 1.0f;
     public GameObject alienExplosionFX;
 
+    Player _player;
+    float xSpeed;
+
+    private void Start()
+    {
+        _player = FindObjectOfType<Player>();
+        xSpeed = _player.currentSpeed;
+    }
+
     void Update()
     {
-        transform.Translate(0, speed * Time.deltaTime, 0);
+        transform.Translate((xSpeed * Time.deltaTime)/2, speed * Time.deltaTime, 0);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
