@@ -20,11 +20,66 @@ public class EnemySpawn : MonoBehaviour
     private GameObject _enemy10;
     private GameObject _enemy11;
 
+    [SerializeField] private int choice;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 10)
         {
-            NewEnemiesIII2();
+            switch (choice)
+            {
+                case 0:
+                    NewEnemiesIII2();
+                    break;
+                case 1:
+                    NewEnemiesI2();
+                    break;
+                case 2:
+                    NewEnemiesII2();
+                    break;
+                case 3:
+                    NewEnemiesI2();
+                    break;
+                case 4:
+                    NewEnemiesII3();
+                    break;
+                case 5:
+                    NewEnemiesIII2();
+                    break;
+                case 6:
+                    NewEnemiesI2();
+                    break;
+                case 7:
+                    NewEnemiesIII2();
+                    break;
+                case 8:
+                    NewEnemiesII3();
+                    break;
+                case 9:
+                    NewEnemiesI3();
+                    break;
+                case 10:
+                    NewEnemiesIII2();
+                    break;
+                case 11:
+                    NewEnemiesI2();
+                    break;
+                case 12:
+                    NewEnemiesIII3();
+                    break;
+                case 13:
+                    NewEnemiesII3();
+                    break;
+                case 14:
+                    NewEnemiesI4();
+                    break;
+                case 15:
+                    NewEnemiesIII4();
+                    break;
+                case 16:
+                    NewEnemiesII3();
+                    break;
+            }
         }
     }
 
