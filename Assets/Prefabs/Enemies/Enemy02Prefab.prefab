@@ -98,17 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a5ca700925cc64f93f7df2cc2d1054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 10
   runAwaySpeed: 8
-  waitTime: 8
+  waitTime: 9
   flyingOutTime: 2
   flyingOutDistance: -3
   changeDirectionWaitTime: 3
-  changeDirectionWaitTime2: 6
-  forwardSpeed: 3
-  backwardsSpeed: -3
+  changeDirectionWaitTime2: 5
+  forwardSpeed: 5
+  backwardsSpeed: -5
   upSpeed: 1
-  downSpeed: -2
+  downSpeed: -1
 --- !u!114 &1054874393633854379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +123,7 @@ MonoBehaviour:
   rocketPrefab: {fileID: 6383543895204848599, guid: c2e142fef4ff8d043af4cd16b796c224,
     type: 3}
   flyingOutTime: 1
+  waitTime: 9
 --- !u!50 &2438968529112866051
 Rigidbody2D:
   serializedVersion: 4
