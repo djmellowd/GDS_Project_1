@@ -31226,6 +31226,7 @@ MonoBehaviour:
   averageTimeText: {fileID: 2103640045}
   recordTimeText: {fileID: 301299790}
   bonusText: {fileID: 271309380}
+  titleText: {fileID: 185332202}
   polygonMountains: {fileID: 630576392}
   frontMountains: {fileID: 667197809}
   mountains: {fileID: 21300000, guid: d5805cdb2c3d0444b8c4b37e2eb7383f, type: 3}

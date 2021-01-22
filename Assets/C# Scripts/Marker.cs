@@ -24,6 +24,7 @@ public class Marker : MonoBehaviour
     {
         hudController.stage = currentStage;
         player.checkpoint.position = transform.position;
+        bonusScreen.GetComponent<BonusScreen>().titleText.text = "Time to reach point " + currentStage;
 
         if (checksForBonus)
         {

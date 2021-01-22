@@ -9,6 +9,7 @@ public class BonusScreen : MonoBehaviour
     public TextMeshProUGUI averageTimeText;
     public TextMeshProUGUI recordTimeText;
     public TextMeshProUGUI bonusText;
+    public TextMeshProUGUI titleText;
 
     public GameObject polygonMountains;
     public GameObject frontMountains;
