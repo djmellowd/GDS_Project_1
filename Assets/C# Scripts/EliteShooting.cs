@@ -11,6 +11,8 @@ public class EliteShooting : MonoBehaviour
     [SerializeField] private float flyingOutTime = 2.0f;
     private float timer = 0.0f;
 
+    [SerializeField] private float runAwayWaitTime = 8.0f;
+
     bool _notShotYet;
 
     private void Start()
@@ -22,7 +24,7 @@ public class EliteShooting : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > flyingOutTime)
+        if (timer > flyingOutTime && timer < runAwayWaitTime)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
             GameObject hitObject = hit.transform.gameObject;

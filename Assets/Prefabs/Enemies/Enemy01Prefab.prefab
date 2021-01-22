@@ -98,11 +98,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a5ca700925cc64f93f7df2cc2d1054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 10
   runAwaySpeed: 8
-  waitTime: 10.5
+  waitTime: 9
   flyingOutTime: 2
   flyingOutDistance: -3
+  changeDirectionWaitTime: 3
+  changeDirectionWaitTime2: 5
+  forwardSpeed: 5
+  backwardsSpeed: -5
+  upSpeed: 1
+  downSpeed: -1
 --- !u!114 &-6682489401660871259
 MonoBehaviour:
   m_ObjectHideFlags: 0

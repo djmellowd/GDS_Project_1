@@ -270,10 +270,9 @@ MonoBehaviour:
   runAwaySpeed: 8
   forwardSpeed: 5
   backwardsSpeed: -5
-  runAwayWaitTime: 9
+  runAwayWaitTime: 8
   changeDirectionWaitTime: 3
-  changeDirectionWaitTime2: 5
-  changeDirectionWaitTime3: 7
+  changeDirectionWaitTime2: 6
   flyingOutTime: 2
   flyingOutDistance: -2
 --- !u!114 &-8480797265888571325

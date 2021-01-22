@@ -11,10 +11,10 @@ public class FlyingElite : MonoBehaviour
     [SerializeField] private float forwardSpeed = 5.0f;
     [SerializeField] private float backwardsSpeed = -5.0f;
 
-    [SerializeField] private float runAwayWaitTime = 9.0f;
+    [SerializeField] private float runAwayWaitTime = 8.0f;
     [SerializeField] private float changeDirectionWaitTime = 3.0f;
-    [SerializeField] private float changeDirectionWaitTime2 = 5.0f;
-    [SerializeField] private float changeDirectionWaitTime3 = 7.0f;
+    [SerializeField] private float changeDirectionWaitTime2 = 6.0f;
+    
     private float timer = 0.0f;
 
     [SerializeField] private float flyingOutTime = 2.0f;
@@ -48,13 +48,9 @@ public class FlyingElite : MonoBehaviour
             {
                 direction += new Vector2(_player.currentSpeed + backwardsSpeed, 0) * Time.deltaTime;
             }
-            else if (timer > changeDirectionWaitTime2 && timer < changeDirectionWaitTime3)
+            else if (timer > changeDirectionWaitTime2)
             {
                 direction += new Vector2(_player.currentSpeed + forwardSpeed, 0) * Time.deltaTime;
-            }
-            else if (timer > changeDirectionWaitTime3)
-            {
-                direction += new Vector2(_player.currentSpeed + backwardsSpeed, 0) * Time.deltaTime;
             }
             transform.position = direction;
         }

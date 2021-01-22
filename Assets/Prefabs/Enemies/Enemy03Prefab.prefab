@@ -100,9 +100,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseSpeed: 10
   runAwaySpeed: 8
-  waitTime: 10.5
+  waitTime: 8
   flyingOutTime: 2
   flyingOutDistance: -3
+  changeDirectionWaitTime: 3
+  changeDirectionWaitTime2: 6
+  forwardSpeed: 3
+  backwardsSpeed: -3
+  upSpeed: 1
+  downSpeed: -2
 --- !u!114 &8175447352314106423
 MonoBehaviour:
   m_ObjectHideFlags: 0
