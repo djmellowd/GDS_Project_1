@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 public class Rocket : MonoBehaviour
 {
     [SerializeField] public float angle = 10.0f;
-    [SerializeField] public float speed = 10.0f;
+    [SerializeField] public float speed = 4.0f;
     public GameObject explosionFX;
     public bool isElite;
 

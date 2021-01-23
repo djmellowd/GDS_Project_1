@@ -5,7 +5,12 @@ public class BasicFlyingAI : MonoBehaviour
 {
     [SerializeField] private float runAwaySpeed = 8.0f;
     Player _player;
-    private Transform target;
+    private Rigidbody2D target;
+    private Vector2 moveDirection;
+    private Rigidbody2D rb;
+    [SerializeField] private float chaseSpeed = 4.0f;
+    [SerializeField] private float angle = 17.0f;
+    [SerializeField] private GameObject explosionFX;
 
     private float rotateSpeed = 3f;
     private float radius = 2f;
@@ -32,9 +37,13 @@ public class BasicFlyingAI : MonoBehaviour
     void Start()
     {
         _player = FindObjectOfType<Player>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
         _centre = transform.position;
         direction = transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+        moveDirection = (target.transform.position - transform.position).normalized * chaseSpeed;
+        rb.velocity = new Vector2(moveDirection.x + 20, moveDirection.y);
     }
 
     void Update()
@@ -42,7 +51,7 @@ public class BasicFlyingAI : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > waitTime)
         {
-            transform.Translate(Vector2.left * runAwaySpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, moveDirection, angle * Time.deltaTime);
         }
         else if (timer < flyingOutTime)
         {
@@ -81,7 +90,10 @@ public class BasicFlyingAI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        float angle = 180;
-        transform.Rotate(0, angle, 0);
+        if (col.gameObject.layer == 13)
+        {
+            GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 }

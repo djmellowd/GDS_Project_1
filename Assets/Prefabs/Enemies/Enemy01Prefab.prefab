@@ -99,6 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runAwaySpeed: 8
+  chaseSpeed: 4
+  angle: 15
+  explosionFX: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 3}
   waitTime: 9
   flyingOutTime: 2
   flyingOutDistance: -3
@@ -108,8 +112,6 @@ MonoBehaviour:
   backwardsSpeed: -5
   upSpeed: 1
   downSpeed: -1
-  explosionFX: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
-    type: 3}
 --- !u!114 &-6682489401660871259
 MonoBehaviour:
   m_ObjectHideFlags: 0
