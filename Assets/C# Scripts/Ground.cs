@@ -13,7 +13,6 @@ public class Ground : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Rocket>().isElite)
             {
-                Debug.Log("Elite hit the ground");
                 GetComponent<SpriteRenderer>().enabled = false;
                 GetComponent<Collider2D>().enabled = false;
 

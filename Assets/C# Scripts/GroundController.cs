@@ -5,15 +5,19 @@ using UnityEngine;
 public class GroundController : MonoBehaviour
 {
     public GameObject[] tiles;
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetHoles()
     {
-        
+        foreach (GameObject tile in tiles)
+        {
+            tile.GetComponent<SpriteRenderer>().enabled = true;
+            tile.GetComponent<Collider2D>().enabled = true;
+
+            /*
+            tile.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            tile.GetComponentInChildren<Collider2D>().enabled = false;
+            tile.GetComponentInChildren<Hole>().enabled = false;
+            */
+        }
     }
 }

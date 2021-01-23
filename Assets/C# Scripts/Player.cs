@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     private Camera _cam;
     private SpriteRenderer _sprite;
     private AudioSource _sfx;
+    private GroundController _groundController;
     private float _nextFire = 0.0f;
 
 
@@ -75,6 +76,7 @@ public class Player : MonoBehaviour
         _cam = FindObjectOfType<Camera>();
         _sprite = GetComponent<SpriteRenderer>();
         _sfx = GetComponent<AudioSource>();
+        _groundController = FindObjectOfType<GroundController>();
     }
 
     void Update()
@@ -307,6 +309,7 @@ public class Player : MonoBehaviour
             {
                 wheel.gameObject.SetActive(true);
             }
+            _groundController.ResetHoles();
             isAlive = true;
         }
         else if (lives <= 0)
