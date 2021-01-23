@@ -9,7 +9,7 @@ public class BasicFlyingAI : MonoBehaviour
     private Vector2 moveDirection;
     private Rigidbody2D rb;
     [SerializeField] private float chaseSpeed = 4.0f;
-    [SerializeField] private float angle = 17.0f;
+    [SerializeField] private float chaseAngle = 17.0f;
     [SerializeField] private GameObject explosionFX;
 
     private float rotateSpeed = 3f;
@@ -32,14 +32,10 @@ public class BasicFlyingAI : MonoBehaviour
     [SerializeField] private float upSpeed = 1.0f;
     [SerializeField] private float downSpeed = -1.0f;
 
-    private Vector2 direction;
-
     void Start()
     {
         _player = FindObjectOfType<Player>();
-
         _centre = transform.position;
-        direction = transform.position;
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         moveDirection = (target.transform.position - transform.position).normalized * chaseSpeed;
@@ -51,7 +47,7 @@ public class BasicFlyingAI : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > waitTime)
         {
-            transform.position = Vector2.MoveTowards(transform.position, moveDirection, angle * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, moveDirection, chaseAngle * Time.deltaTime);
         }
         else if (timer < flyingOutTime)
         {
