@@ -24,7 +24,7 @@ public class EliteShooting : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer < flyingOutTime && timer < runAwayWaitTime)
+        if (timer > flyingOutTime && timer < runAwayWaitTime)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
             GameObject hitObject = hit.transform.gameObject;

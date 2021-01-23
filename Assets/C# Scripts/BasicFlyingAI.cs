@@ -63,13 +63,13 @@ public class BasicFlyingAI : MonoBehaviour
         {
             if (timer < changeDirectionWaitTime)
             {
-                _centre += new Vector2(_player.currentSpeed + forwardSpeed * Random.Range(1f, 1.2f), downSpeed * Random.Range(0.8f, 1.2f)) * Time.deltaTime;
+                _centre += new Vector2(_player.currentSpeed + forwardSpeed * Random.Range(1f, 1.2f), downSpeed) * Time.deltaTime;
 
                 _angle += rotateSpeed * Time.deltaTime;
             }
             else if (timer > changeDirectionWaitTime && timer < changeDirectionWaitTime2)
             {
-                _centre += new Vector2(_player.currentSpeed + backwardsSpeed * Random.Range(1f, 1.2f), upSpeed * Random.Range(0.8f, 1.2f)) * Time.deltaTime;
+                _centre += new Vector2(_player.currentSpeed + backwardsSpeed * Random.Range(1f, 1.2f), upSpeed) * Time.deltaTime;
 
                 _angle += rotateSpeed * Time.deltaTime;
             }
