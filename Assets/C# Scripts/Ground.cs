@@ -21,5 +21,10 @@ public class Ground : MonoBehaviour
                 hole.GetComponent<Hole>().enabled = true;
             }
         }
+        else if (collision.gameObject.layer == 11)
+        {
+            GameObject boom = Instantiate(collision.gameObject.GetComponent<BasicFlyingAI>().explosionFX, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+            Destroy(collision.gameObject);
+        }
     }
 }

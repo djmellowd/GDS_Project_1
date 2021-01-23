@@ -10,7 +10,7 @@ public class BasicFlyingAI : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float chaseSpeed = 4.0f;
     [SerializeField] private float chaseAngle = 17.0f;
-    [SerializeField] private GameObject explosionFX;
+    public GameObject explosionFX;
 
     private float rotateSpeed = 3f;
     private float radius = 2f;
@@ -40,6 +40,7 @@ public class BasicFlyingAI : MonoBehaviour
         target = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         moveDirection = (target.transform.position - transform.position).normalized * chaseSpeed;
         rb.velocity = new Vector2(moveDirection.x + 20, moveDirection.y);
+        Random.seed = System.DateTime.Now.Millisecond;
     }
 
     void Update()
@@ -62,19 +63,19 @@ public class BasicFlyingAI : MonoBehaviour
         {
             if (timer < changeDirectionWaitTime)
             {
-                _centre += new Vector2(_player.currentSpeed + forwardSpeed, downSpeed) * Time.deltaTime;
+                _centre += new Vector2(_player.currentSpeed + forwardSpeed * Random.Range(1f, 1.2f), downSpeed * Random.Range(0.8f, 1.2f)) * Time.deltaTime;
 
                 _angle += rotateSpeed * Time.deltaTime;
             }
             else if (timer > changeDirectionWaitTime && timer < changeDirectionWaitTime2)
             {
-                _centre += new Vector2(_player.currentSpeed + backwardsSpeed, upSpeed) * Time.deltaTime;
+                _centre += new Vector2(_player.currentSpeed + backwardsSpeed * Random.Range(1f, 1.2f), upSpeed * Random.Range(0.8f, 1.2f)) * Time.deltaTime;
 
                 _angle += rotateSpeed * Time.deltaTime;
             }
             else if (timer > changeDirectionWaitTime2)
             {
-                _centre += new Vector2(_player.currentSpeed + 2.0f, 0) * Time.deltaTime;
+                _centre += new Vector2(_player.currentSpeed + 2.0f * Random.Range(1f, 1.2f), 0) * Time.deltaTime;
 
                 _angle += rotateSpeed * Time.deltaTime;
             }

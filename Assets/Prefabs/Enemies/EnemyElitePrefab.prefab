@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4612186122960822449}
   - component: {fileID: 6285469221575707520}
   - component: {fileID: 8000902443612632812}
-  - component: {fileID: -7228207146237306419}
   - component: {fileID: -8480797265888571325}
+  - component: {fileID: -1333855051273896070}
   m_Layer: 11
   m_Name: EnemyElitePrefab
   m_TagString: Enemy4
@@ -99,7 +99,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -255,26 +255,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-7228207146237306419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5665474971033430828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5c7d152a0d72d4981d4e45c480f3e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runAwaySpeed: 8
-  forwardSpeed: 5
-  backwardsSpeed: -5
-  runAwayWaitTime: 8
-  changeDirectionWaitTime: 3
-  changeDirectionWaitTime2: 6
-  flyingOutTime: 2
-  flyingOutDistance: -2
 --- !u!114 &-8480797265888571325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,3 +270,29 @@ MonoBehaviour:
   rocketPrefabElite: {fileID: 6383543895204848599, guid: 26ec556133ce0fd47a324e1a4341a0e5,
     type: 3}
   flyingOutTime: 2
+  runAwayWaitTime: 8
+--- !u!114 &-1333855051273896070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665474971033430828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a5ca700925cc64f93f7df2cc2d1054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runAwaySpeed: 8
+  chaseSpeed: 4
+  chaseAngle: 17
+  explosionFX: {fileID: 0}
+  waitTime: 7
+  flyingOutTime: 2
+  flyingOutDistance: -3
+  changeDirectionWaitTime: 3
+  changeDirectionWaitTime2: 6
+  forwardSpeed: 3
+  backwardsSpeed: -3
+  upSpeed: 1
+  downSpeed: -1
