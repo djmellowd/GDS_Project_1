@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketPrefabElite: {fileID: 6383543895204848599, guid: 26ec556133ce0fd47a324e1a4341a0e5,
     type: 3}
-  flyingOutTime: 2
+  flyingOutTime: 1
   runAwayWaitTime: 8
 --- !u!114 &-1333855051273896070
 MonoBehaviour:
