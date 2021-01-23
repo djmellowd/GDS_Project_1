@@ -12,12 +12,6 @@ public class GroundController : MonoBehaviour
         {
             tile.GetComponent<SpriteRenderer>().enabled = true;
             tile.GetComponent<Collider2D>().enabled = true;
-
-            /*
-            tile.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            tile.GetComponentInChildren<Collider2D>().enabled = false;
-            tile.GetComponentInChildren<Hole>().enabled = false;
-            */
         }
     }
 }
