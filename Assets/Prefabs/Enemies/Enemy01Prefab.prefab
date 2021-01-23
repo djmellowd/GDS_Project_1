@@ -108,6 +108,8 @@ MonoBehaviour:
   backwardsSpeed: -5
   upSpeed: 1
   downSpeed: -1
+  explosionFX: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
 --- !u!114 &-6682489401660871259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +125,7 @@ MonoBehaviour:
   rocketPrefab: {fileID: 6383543895204848599, guid: c2e142fef4ff8d043af4cd16b796c224,
     type: 3}
   flyingOutTime: 1
+  waitTime: 9
 --- !u!60 &8202065140809567491
 PolygonCollider2D:
   m_ObjectHideFlags: 0
