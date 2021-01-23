@@ -45507,21 +45507,6 @@ PrefabInstance:
       objectReference: {fileID: 851198597}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
-      propertyPath: lives
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
-        type: 3}
-      propertyPath: fireRate
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
-        type: 3}
-      propertyPath: jumpForce
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
-        type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 227821394}
@@ -45589,11 +45574,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8644770938837225660, guid: e79af15c2ec157b439babb2139971d5e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e79af15c2ec157b439babb2139971d5e, type: 3}
