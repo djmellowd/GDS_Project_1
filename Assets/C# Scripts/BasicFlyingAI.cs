@@ -9,7 +9,7 @@ public class BasicFlyingAI : MonoBehaviour
     private Vector2 moveDirection;
     private Rigidbody2D rb;
     [SerializeField] private float chaseSpeed = 4.0f;
-    [SerializeField] private float chaseAngle = 17.0f;
+    [SerializeField] private float chaseAngle = 15.0f;
     public GameObject explosionFX;
 
     private float rotateSpeed = 3f;
