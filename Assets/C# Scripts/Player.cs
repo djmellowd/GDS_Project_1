@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public bool isAlive = true;
     public float currentSpeed;
     public float jumpForce;
+    public float fireRate;
 
     public GameObject pauseMenu;
 
@@ -50,6 +51,7 @@ public class Player : MonoBehaviour
     private Camera _cam;
     private SpriteRenderer _sprite;
     private AudioSource _sfx;
+    private float _nextFire = 0.0f;
 
 
 
@@ -158,8 +160,9 @@ public class Player : MonoBehaviour
         */
         transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Fire") && pauseMenu.activeSelf == false)
+        if (Input.GetButtonDown("Fire") && pauseMenu.activeSelf == false && Time.time > _nextFire)
         {
+            _nextFire = Time.time + fireRate;
             _sfx.clip = fireSFX;
             _sfx.Play();
             _missile = Instantiate(missilePrefab, transform.position + transform.up * 2.0f + transform.right * -1.0f, transform.rotation) as GameObject;
