@@ -29,5 +29,9 @@ public class Obstacle : MonoBehaviour
             
             Destroy(gameObject);
         }
+        else if (collision.gameObject.layer == 11)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

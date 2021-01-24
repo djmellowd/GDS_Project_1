@@ -32,6 +32,9 @@ public class BasicFlyingAI : MonoBehaviour
     [SerializeField] private float upSpeed = 1.0f;
     [SerializeField] private float downSpeed = -1.0f;
 
+    private int _id;
+    int id;
+
     void Start()
     {
         _player = FindObjectOfType<Player>();
@@ -41,6 +44,7 @@ public class BasicFlyingAI : MonoBehaviour
         moveDirection = (target.transform.position - transform.position).normalized * chaseSpeed;
         rb.velocity = new Vector2(moveDirection.x + 20, moveDirection.y);
         Random.seed = System.DateTime.Now.Millisecond;
+        id = Random.Range(0, 2);
     }
 
     void Update()
@@ -48,7 +52,7 @@ public class BasicFlyingAI : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > waitTime)
         {
-            transform.position = Vector2.MoveTowards(transform.position, moveDirection, chaseAngle * Time.deltaTime);
+            FlyAway(id);
         }
         else if (timer < flyingOutTime)
         {
@@ -85,12 +89,16 @@ public class BasicFlyingAI : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    public void FlyAway(int id)
     {
-        if (col.gameObject.layer == 13)
+        _id = id;
+        if (_id == 1)
         {
-            GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
-            Destroy(gameObject);
+            transform.Translate(Vector2.up * runAwaySpeed * Time.deltaTime);
+        }
+        else if (_id == 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, moveDirection, chaseAngle * Time.deltaTime);
         }
     }
 }
