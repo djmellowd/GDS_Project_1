@@ -293,7 +293,7 @@ MonoBehaviour:
   flyingOutDistance: -3
   changeDirectionWaitTime: 3
   changeDirectionWaitTime2: 6
-  forwardSpeed: 3
-  backwardsSpeed: -3
+  forwardSpeed: 2
+  backwardsSpeed: -2
   upSpeed: 1
   downSpeed: -1
