@@ -101,4 +101,13 @@ public class BasicFlyingAI : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, moveDirection, chaseAngle * Time.deltaTime);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 13)
+        {
+            GameObject boom = Instantiate(explosionFX, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
 }
