@@ -615,7 +615,7 @@ MonoBehaviour:
   initialSpeed: 6
   isAlive: 1
   currentSpeed: 0
-  jumpForce: 14
+  jumpForce: 15
   fireRate: 0.2
   pauseMenu: {fileID: 0}
   explosionFX: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,

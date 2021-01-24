@@ -100,6 +100,10 @@ MonoBehaviour:
   speed: 10
   alienExplosionFX: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c,
     type: 3}
+  pointsPopup100: {fileID: 3032493016625369292, guid: 59d7c6481b8651046a0e58d6181dd9c2,
+    type: 3}
+  pointsPopup200: {fileID: 6860488083754047105, guid: 7251934330af2d04697d914a66379b15,
+    type: 3}
 --- !u!50 &2572584844115693984
 Rigidbody2D:
   serializedVersion: 4
@@ -135,6 +139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   alienExplosionFX: {fileID: 0}
+  pointsPopup100: {fileID: 1444511227996369015, guid: 5fb48eda08667f54d9641108e79f3184,
+    type: 3}
+  pointsPopup200: {fileID: 7147482228217344131, guid: b007e76f70f202a4abe525ba4607fbe4,
+    type: 3}
 --- !u!70 &4609187981007626851
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

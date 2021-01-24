@@ -6,6 +6,7 @@ public class Missile2 : MonoBehaviour
     public float speed = 3.0f;
     public GameObject alienExplosionFX;
 
+
     Player _player;
 
     void Start()
@@ -35,6 +36,15 @@ public class Missile2 : MonoBehaviour
         {
             //+100 pkt za podstawowego wroga
             Player.score += 100;
+            GameObject boom = Instantiate(alienExplosionFX, transform.position, transform.rotation);
+            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, 1f);
+        }
+        else if (collision.gameObject.layer == 17)
+        {
+            //+200 pkt za tri-orba
+            Player.score += 200;
             GameObject boom = Instantiate(alienExplosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
