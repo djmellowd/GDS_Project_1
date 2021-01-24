@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8000902443612632812}
   - component: {fileID: -8480797265888571325}
   - component: {fileID: -1333855051273896070}
-  m_Layer: 11
+  m_Layer: 17
   m_Name: EnemyElitePrefab
   m_TagString: Enemy4
   m_Icon: {fileID: 0}
