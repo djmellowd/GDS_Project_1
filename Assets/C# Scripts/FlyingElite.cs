@@ -28,7 +28,6 @@ public class FlyingElite : MonoBehaviour
 
     void Update()
     {
-        Random.seed = System.DateTime.Now.Millisecond;
         timer += Time.deltaTime;
         if (timer > runAwayWaitTime)
         {
