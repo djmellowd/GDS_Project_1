@@ -22,7 +22,6 @@ public class Rocket : MonoBehaviour
         target = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         moveDirection = (target.transform.position - transform.position).normalized * speed;
         rb.velocity = new Vector2(moveDirection.x + 20, moveDirection.y);
-        Destroy(gameObject, 3f);
     }
 
     void Update()
