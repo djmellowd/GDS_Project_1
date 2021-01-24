@@ -34,7 +34,13 @@ public class BasicFlyingAI : MonoBehaviour
     [SerializeField] private float downSpeed = -1.0f;
 
     private int _id;
+    private int _id2;
+    private int _id3;
+    private int _id4;
     int id;
+    int id2;
+    int id3;
+    int id4;
 
     void Start()
     {
@@ -45,6 +51,9 @@ public class BasicFlyingAI : MonoBehaviour
         moveDirection = (target.transform.position - transform.position).normalized * chaseSpeed;
         rb.velocity = new Vector2(moveDirection.x + 20, moveDirection.y);
         id = Random.Range(0, 2);
+        id2 = Random.Range(0, 2);
+        id3 = Random.Range(0, 2);
+        id4 = Random.Range(0, 2);
     }
 
     void Update()
@@ -67,21 +76,15 @@ public class BasicFlyingAI : MonoBehaviour
         {
             if (timer < changeDirectionWaitTime)
             {
-                _centre += new Vector2(_player.currentSpeed + (forwardSpeed * Random.Range(0.9f, 1.2f)), downSpeed) * Time.deltaTime;
-
-                _angle += rotateSpeed * Time.deltaTime;
+                StepChange(id2);
             }
             else if (timer > changeDirectionWaitTime && timer < changeDirectionWaitTime2)
             {
-                _centre += new Vector2(_player.currentSpeed + (backwardsSpeed * Random.Range(0.9f, 1.2f)), upSpeed) * Time.deltaTime;
-
-                _angle += rotateSpeed * Time.deltaTime;
+                StepChange2(id3);
             }
             else if (timer > changeDirectionWaitTime2)
             {
-                _centre += new Vector2(_player.currentSpeed + 2.0f, 0) * Time.deltaTime;
-
-                _angle += rotateSpeed * Time.deltaTime;
+                StepChange3(id4);
             }
 
             var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
@@ -99,6 +102,57 @@ public class BasicFlyingAI : MonoBehaviour
         else if (_id == 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, moveDirection, chaseAngle * Time.deltaTime);
+        }
+    }
+
+    public void StepChange(int id2)
+    {
+        _id2 = id2;
+        if (_id2 == 1)
+        {
+            _centre += new Vector2(_player.currentSpeed + (forwardSpeed * Random.Range(0.9f, 1.2f)), downSpeed) * Time.deltaTime;
+
+            _angle += rotateSpeed * Time.deltaTime;
+        }
+        else if (_id2 == 0)
+        {
+            _centre += new Vector2(_player.currentSpeed + (backwardsSpeed * Random.Range(0.9f, 1.2f)), downSpeed) * Time.deltaTime;
+
+            _angle += rotateSpeed * Time.deltaTime;
+        }
+    }
+
+    public void StepChange2(int id3)
+    {
+        _id3 = id3;
+        if (_id3 == 1)
+        {
+            _centre += new Vector2(_player.currentSpeed + (backwardsSpeed * Random.Range(0.9f, 1.2f)), upSpeed) * Time.deltaTime;
+
+            _angle += rotateSpeed * Time.deltaTime;
+        }
+        else if (_id3 == 0)
+        {
+            _centre += new Vector2(_player.currentSpeed + (forwardSpeed * Random.Range(0.9f, 1.2f)), upSpeed) * Time.deltaTime;
+
+            _angle += rotateSpeed * Time.deltaTime;
+        }
+    }
+
+    public void StepChange3(int id4)
+    {
+        _id4 = id4;
+        if (_id4 == 1)
+        {
+            _centre += new Vector2(_player.currentSpeed + 2.0f, 0) * Time.deltaTime;
+
+            _angle += rotateSpeed * Time.deltaTime;
+        }
+        else if (_id4 == 0)
+        {
+            _centre += new Vector2(_player.currentSpeed + 3.0f, 0) * Time.deltaTime;
+
+            _angle += rotateSpeed * Time.deltaTime;
         }
     }
 
