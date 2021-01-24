@@ -26,10 +26,6 @@ public class EliteShooting : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > flyingOutTime && timer < runAwayWaitTime)
         {
-            //RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-            //GameObject hitObject = hit.transform.gameObject;
-            //if (hitObject.GetComponent<Player>())
-            //{
                 if (_rocket2 == null && _notShotYet && !SceneController.isEliteMissileOnScene)
                 {
                     _rocket2 = Instantiate(rocketPrefabElite) as GameObject;
@@ -39,7 +35,6 @@ public class EliteShooting : MonoBehaviour
                     _notShotYet = false;
                     SceneController.isEliteMissileOnScene = true;
                 }
-            //}
         }
     }
 }
