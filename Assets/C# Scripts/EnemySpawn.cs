@@ -29,7 +29,7 @@ public class EnemySpawn : MonoBehaviour
             switch (choice)
             {
                 case 0:
-                    NewEnemiesIII2();
+                    NewEnemiesI2();
                     break;
                 case 1:
                     NewEnemiesI2();
