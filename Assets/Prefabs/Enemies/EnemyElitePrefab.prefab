@@ -286,7 +286,7 @@ MonoBehaviour:
   runAwaySpeed: 8
   chaseSpeed: 4
   chaseAngle: 15
-  explosionFX: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+  explosionFX: {fileID: 1121192042590650, guid: 56729ed960281454f81518285a976e55,
     type: 3}
   waitTime: 7
   flyingOutTime: 2
