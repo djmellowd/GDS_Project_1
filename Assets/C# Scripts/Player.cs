@@ -172,6 +172,7 @@ public class Player : MonoBehaviour
 
             //w oryginale rakieta z przodu ma ograniczony zasięg, żeby nie mogła doleciec za daleko
             Destroy(_missile2, 0.6f);
+            Destroy(_missile, 1f);
         }
 
         CheckForHighscore();

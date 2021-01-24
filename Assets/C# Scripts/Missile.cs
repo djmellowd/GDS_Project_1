@@ -31,5 +31,14 @@ public class Missile : MonoBehaviour
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             Destroy(gameObject, 1f);
         }
+        else if (collision.gameObject.layer == 17)
+        {
+            //+200 pkt za tri-orba
+            Player.score += 200;
+            GameObject boom = Instantiate(alienExplosionFX, transform.position, transform.rotation);
+            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, 1f);
+        }
     }
 }
