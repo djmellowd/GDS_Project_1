@@ -35833,7 +35833,7 @@ PrefabInstance:
     - target: {fileID: 1037861087493556377, guid: 02d495cd4946430429eaf6a73baa2819,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3899143410583771768, guid: 02d495cd4946430429eaf6a73baa2819,
         type: 3}
@@ -47518,6 +47518,11 @@ PrefabInstance:
       propertyPath: enemyCautionSprite
       value: 
       objectReference: {fileID: 851198597}
+    - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
+        type: 3}
+      propertyPath: jumpForce
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8147018720379390115, guid: e79af15c2ec157b439babb2139971d5e,
         type: 3}
       propertyPath: pauseMenu
