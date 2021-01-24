@@ -4,12 +4,14 @@ using System.Collections;
 public class SceneController : MonoBehaviour
 {
     public static bool isEliteMissileOnScene;
+    public static bool isMissileOnScene;
 
     void Start()
     {
         //zerowanie wyniku na starcie
         Player.score = 0;
         isEliteMissileOnScene = false;
+        isMissileOnScene = false;
     }
 
     void Update()

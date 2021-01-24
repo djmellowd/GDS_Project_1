@@ -55,5 +55,9 @@ public class Rocket : MonoBehaviour
         {
             SceneController.isEliteMissileOnScene = false;
         }
+        else
+        {
+            SceneController.isMissileOnScene = false;
+        }
     }
 }
