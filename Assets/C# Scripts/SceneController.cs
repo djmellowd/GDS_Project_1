@@ -12,6 +12,7 @@ public class SceneController : MonoBehaviour
         Player.score = 0;
         isEliteMissileOnScene = false;
         isMissileOnScene = false;
+        Cursor.visible = false;
     }
 
     void Update()
