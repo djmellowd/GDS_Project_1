@@ -13,25 +13,25 @@ public class CheckpointStart : MonoBehaviour
             GameObject[] allObjects1 = GameObject.FindGameObjectsWithTag("Enemy1");
             foreach (GameObject obj in allObjects1)
             {
-                transform.Translate(Vector2.left * runAwaySpeed * Time.deltaTime);
+                transform.Translate(Vector2.up * runAwaySpeed * Time.deltaTime);
             }
 
             GameObject[] allObjects2 = GameObject.FindGameObjectsWithTag("Enemy2");
             foreach (GameObject obj in allObjects2)
             {
-                transform.Translate(Vector2.left * runAwaySpeed * Time.deltaTime);
+                transform.Translate(Vector2.up * runAwaySpeed * Time.deltaTime);
             }
 
             GameObject[] allObjects3 = GameObject.FindGameObjectsWithTag("Enemy3");
             foreach (GameObject obj in allObjects3)
             {
-                transform.Translate(Vector2.left * runAwaySpeed * Time.deltaTime);
+                transform.Translate(Vector2.up * runAwaySpeed * Time.deltaTime);
             }
 
             GameObject[] allObjects4 = GameObject.FindGameObjectsWithTag("Enemy4");
             foreach (GameObject obj in allObjects4)
             {
-                transform.Translate(Vector2.left * runAwaySpeed * Time.deltaTime);
+                transform.Translate(Vector2.up * runAwaySpeed * Time.deltaTime);
             }
         }
     }
