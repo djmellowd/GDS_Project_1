@@ -4,7 +4,7 @@ using System.Collections;
 public class FollowCam : MonoBehaviour
 {
     public Transform target;
-    public float smoothTime = 0.2f;
+    public float smoothTime = 0.6f;
 
     Player _player;
 
@@ -17,7 +17,7 @@ public class FollowCam : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 targetPosition = new Vector3(target.position.x + 5, transform.position.y, transform.position.z);
+        Vector3 targetPosition = new Vector3(target.position.x + 10, transform.position.y, transform.position.z);
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, smoothTime);
 
         /*
