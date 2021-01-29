@@ -30,7 +30,7 @@ public class Missile : MonoBehaviour
             GameObject boom = Instantiate(alienExplosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            Destroy(gameObject, 1f);
+            Destroy(gameObject);
         }
         else if (collision.gameObject.layer == 17)
         {
@@ -39,7 +39,7 @@ public class Missile : MonoBehaviour
             GameObject boom = Instantiate(alienExplosionFX, transform.position, transform.rotation);
             Destroy(collision.gameObject);
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            Destroy(gameObject, 1f);
+            Destroy(gameObject);
         }
     }
 }
